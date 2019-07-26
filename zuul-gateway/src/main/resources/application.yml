@@ -1,0 +1,18 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: zuul-gateway
+eureka:
+  instance:
+    instance-id: zuul-9001
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+zuul:
+  ignored-services: "*"  #用*来通配符，忽略从9527端口通过服务名来调用
+  prefix: "/services"  #这是所有路径的前缀
+  routes:   #配置路由
+    user.serviceId: plat-parent
+    user.path: /user/**
