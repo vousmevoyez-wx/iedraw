@@ -11,6 +11,9 @@
     <modules>
         <module>basic-code</module>
         <module>plat-parent</module>
+        <module>draw-parent</module>
+        <module>config-server</module>
+        <module>code-generator</module>
     </modules>
 
     <!--项目的属性-->

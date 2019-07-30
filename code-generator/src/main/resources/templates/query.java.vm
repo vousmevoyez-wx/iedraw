@@ -1,0 +1,11 @@
+package com.shengyuanjun.iedraw.query;
+
+import com.shengyuanjun.iedraw.util.BaseQuery;
+
+/**
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public class ${table.entityName}Query extends BaseQuery{
+}

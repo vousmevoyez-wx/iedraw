@@ -8,9 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="plat-interface" />
         <module name="eureka-server" />
+        <module name="code-generator" />
+        <module name="config-server" />
+        <module name="plat-service" />
+        <module name="draw-service" />
+        <module name="draw-interface" />
         <module name="zuul-gateway" />
         <module name="basic-util" />
-        <module name="plat-service" />
       </profile>
     </annotationProcessing>
   </component>
