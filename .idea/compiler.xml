@@ -11,12 +11,15 @@
         <module name="code-generator" />
         <module name="config-server" />
         <module name="plat-service" />
+        <module name="common-interface" />
         <module name="draw-service" />
-        <module name="draw-interface" />
         <module name="zuul-gateway" />
+        <module name="draw-interface" />
         <module name="basic-util" />
+        <module name="common-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

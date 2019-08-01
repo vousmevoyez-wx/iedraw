@@ -1,24 +1,21 @@
+#注册到eurak服务端中
 eureka:
-  instance:
-    instance-id: zuul-9001
-    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: plat-7001
+    prefer-ip-address: true
 #从配置中心获取配置
 spring:
   profiles:
     active: dev
   cloud:
     config:
-      name: application-zuul #github上面的名字
+      name: application-plat #github上面名称
       profile: ${spring.profiles.active} #环境 java -jar -D xxx jar
       label: '' #分支
       discovery:
         enabled: true #从eureka上面找配置服务
         service-id: iedraw-config #指定服务名
         #uri: http://127.0.0.1:1299 #配置服务器 单机配置
-#设置网关的超时时间
-ribbon:
-  ReadTimeout: 5000
-  SocketTimeout: 5000

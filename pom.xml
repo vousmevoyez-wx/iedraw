@@ -14,6 +14,7 @@
         <module>draw-parent</module>
         <module>config-server</module>
         <module>code-generator</module>
+        <module>draw-common</module>
     </modules>
 
     <!--项目的属性-->
