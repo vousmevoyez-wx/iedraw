@@ -1,0 +1,23 @@
+server:
+  port: 1299
+spring:
+  application:
+    name: iedraw-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        #          git: 可以在github上面拉取配置
+        #            uri: 这里是github的url
+        #            username: github的username
+        #            password: github的password
+        native: #从本地拉取配置
+          search-locations: file:D:/GitProject/project/iedraw-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: config-server
+    prefer-ip-address: true
