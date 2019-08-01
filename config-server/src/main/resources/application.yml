@@ -13,7 +13,7 @@ spring:
         #            username: github的username
         #            password: github的password
         native: #从本地拉取配置
-          search-locations: file:D:/IDEA/github/iedraw-config
+          search-locations: file:D:/GitProject/project/iedraw-config
 eureka:
   client:
     service-url:
