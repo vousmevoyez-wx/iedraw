@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18b607cb-c7f5-4dc6-8d16-05e05215cb51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+    <list default="true" id="18b607cb-c7f5-4dc6-8d16-05e05215cb51" name="Default Changelist" comment="修改zuul的配置yml文件">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/ClientHystrixFallbackFactory.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/ClientHystrixFallbackFactory.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/client.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/client.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/query.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/query.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,6 +42,36 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="iedraw" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="iedraw" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="iedraw" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="iedraw: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
@@ -52,42 +92,75 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java">
+        <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
               <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
-                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
+        <entry file="file://$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="66" lean-forward="true" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+            <state relative-caret-position="924">
+              <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
               <folding>
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#540#541#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2380#2680#0" expanded="true" />
+                <element signature="e#2679#2680#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/WechatUserInfoMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WechatUserInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1858#1859#0" expanded="true" />
+                <element signature="e#1917#1918#0" expanded="true" />
+                <element signature="e#2413#2429#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml">
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state relative-caret-position="594">
+              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+              <folding>
+                <element signature="e#1823#1824#0" expanded="true" />
+                <element signature="e#1880#1881#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -107,17 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/eureka-server/src/main/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplication.java" />
-        <option value="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java" />
-        <option value="$PROJECT_DIR$/basic-code/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/encrypt/DES.java" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/encrypt/MD5.java" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/BaseQuery.java" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/BitStatesUtils.java" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/GlobalSetting.java" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/LetterUtil.java" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PageList.java" />
-        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/ProductStateConsts.java" />
         <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/StrUtils.java" />
         <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/AjaxResult.java" />
         <option value="$PROJECT_DIR$/plat-parent/plat-service/pom.xml" />
@@ -130,15 +192,9 @@
         <option value="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/web/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/draw-parent/pom.xml" />
         <option value="$PROJECT_DIR$/plat-parent/plat-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/code-generator/pom.xml" />
-        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm" />
-        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm" />
-        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm" />
         <option value="$PROJECT_DIR$/code-generator/src/main/resources/mybatis-plus-product.properties" />
-        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm" />
-        <option value="$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java" />
         <option value="$PROJECT_DIR$/draw-common/pom.xml" />
         <option value="$PROJECT_DIR$/draw-common/common-interface/pom.xml" />
         <option value="$PROJECT_DIR$/draw-common/common-interface/src/main/java/com/shengyuanjun/iedraw/client/RedisClient.java" />
@@ -158,6 +214,23 @@
         <option value="$PROJECT_DIR$/config-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/WechatUserInfoQuery.java" />
+        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm" />
+        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm" />
+        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm" />
+        <option value="$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IWechatUserInfoService.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/WechatUserInfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/WechatUserInfoMapper.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/WechatUserInfo.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/ActivityTime.java" />
+        <option value="$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/Prize.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/WechatUserInfoMapper.xml" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WechatUserInfoController.java" />
+        <option value="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PageList.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java" />
       </list>
     </option>
   </component>
@@ -220,42 +293,42 @@
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="config-server" type="462c0819:PsiDirectoryNode" />
+              <item name="code-generator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -263,60 +336,34 @@
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-interface" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="eureka-server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="eurekaserver" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-interface" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-interface" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -324,19 +371,138 @@
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-interface" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zuulgateway" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-interface" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="query" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -347,6 +513,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -383,7 +550,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZuulGatewayApplication">
+  <component name="RunManager" selected="Application.GenteratorCode">
+    <configuration name="GenteratorCode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shengyuanjun.iedraw.GenteratorCode" />
+      <module name="code-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shengyuanjun.iedraw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server" />
       <extension name="coverage">
@@ -426,6 +606,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.GenteratorCode" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.ZuulGatewayApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -433,6 +614,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GenteratorCode" />
         <item itemvalue="Spring Boot.PlatServiceApplication" />
       </list>
     </recent_temporary>
@@ -452,7 +634,9 @@
       <workItem from="1564458139078" duration="17405000" />
       <workItem from="1564535307278" duration="9579000" />
       <workItem from="1564622765896" duration="11862000" />
-      <workItem from="1564648771049" duration="3287000" />
+      <workItem from="1564648771049" duration="9448000" />
+      <workItem from="1564708589102" duration="14796000" />
+      <workItem from="1564794833958" duration="6891000" />
     </task>
     <task id="LOCAL-00001" summary="修改LoginController">
       <created>1564461149135</created>
@@ -482,15 +666,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564650496067</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修改zuul的配置yml文件">
+      <created>1564652138807</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1564652138807</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61067000" />
+    <option name="totallyTimeSpent" value="88915000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -498,7 +688,7 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.18603411" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.19029851" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -511,14 +701,14 @@
       <window_info anchor="bottom" id="Spring" order="8" weight="0.3286334" />
       <window_info anchor="bottom" id="Message" order="9" />
       <window_info anchor="bottom" id="Find" order="10" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.46203905" />
+      <window_info anchor="bottom" id="Run" order="11" weight="0.3177874" />
       <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="15" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.13752665" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Bean Validation" order="5" weight="0.16311301" />
@@ -579,313 +769,10 @@
     <MESSAGE value="搭建平台服务、抽奖服务、代码生成器、配置服务、基础代码服务框架" />
     <MESSAGE value="搭建配置中心" />
     <MESSAGE value="修改配置中心url" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改配置中心url" />
+    <MESSAGE value="修改zuul的配置yml文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改zuul的配置yml文件" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/AjaxResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/plat-service.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-interface/src/main/java/com/shengyuanjun/iedraw/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/com/netflix/loadbalancer/LoadBalancerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="373" selection-start-line="373" selection-end-line="373" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="30" column="52" lean-forward="true" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/DocumentationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-interface/plat-interface.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.m2/repository/org/springframework/boot/spring-boot-dependencies/2.0.5.RELEASE/spring-boot-dependencies-2.0.5.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8416">
-          <caret line="506" column="12" selection-start-line="506" selection-start-column="12" selection-end-line="506" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1034">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/web/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/code-generator.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/resources/fdfs_client.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="50" lean-forward="true" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1446">
-          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-interface/src/main/java/com/shengyuanjun/iedraw/client/RedisClientFallbackFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#389#390#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/mybatis-plus-iedraw.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="86" column="5" lean-forward="true" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/draw-common/common-interface/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -897,13 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -928,6 +808,205 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/DocumentationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/SwaggerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="57" lean-forward="true" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/web/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/28cfb7fb-3d82-4c43-9ac1-0e4eeec0cf19/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/mybatis-plus-iedraw.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/WechatUserInfoQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IWechatUserInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/WechatUserInfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="69" selection-start-line="17" selection-start-column="69" selection-end-line="17" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/WechatUserInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+          <folding>
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/WechatUserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1121#1122#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/ActivityTimeQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IActivityTimeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -940,38 +1019,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java">
+    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/ActivityTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="924">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2380#2680#0" expanded="true" />
+            <element signature="e#2679#2680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/PrizeQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="13" column="66" lean-forward="true" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/Prize.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/WechatUserInfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/impl/ServiceImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
           <folding>
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#1427#1428#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+            <element signature="e#9679#9680#0" expanded="true" />
+            <element signature="e#9745#9746#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/service/IService.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="281">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-support/2.2.0/mybatis-plus-support-2.2.0.jar!/com/baomidou/mybatisplus/plugins/Page.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/ActivityTimeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PageList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <element signature="e#1823#1824#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WechatUserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#2413#2429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

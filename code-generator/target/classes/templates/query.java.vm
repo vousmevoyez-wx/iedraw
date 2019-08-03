@@ -1,6 +1,6 @@
 package com.shengyuanjun.iedraw.query;
 
-import com.shengyuanjun.iedraw.util.BaseQuery;
+import com.shengyuanjun.iedraw.BaseQuery;
 
 /**
  *

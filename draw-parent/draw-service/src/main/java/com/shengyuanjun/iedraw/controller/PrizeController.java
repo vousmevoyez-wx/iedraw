@@ -1,8 +1,8 @@
-package ${package.Controller};
+package com.shengyuanjun.iedraw.controller;
 
-import ${package.Service}.${table.serviceName};
-import ${package.Entity}.${entity};
-import com.shengyuanjun.iedraw.query.${entity}Query;
+import com.shengyuanjun.iedraw.service.IPrizeService;
+import com.shengyuanjun.iedraw.domain.Prize;
+import com.shengyuanjun.iedraw.query.PrizeQuery;
 import com.shengyuanjun.iedraw.AjaxResult;
 import com.shengyuanjun.iedraw.PageList;
 import com.baomidou.mybatisplus.plugins.Page;
@@ -12,23 +12,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/${table.entityPath}")
-public class ${entity}Controller {
+@RequestMapping("/prize")
+public class PrizeController {
     @Autowired
-    public ${table.serviceName} ${table.entityPath}Service;
+    public IPrizeService prizeService;
 
     /**
     * 保存和修改公用的
-    * @param ${table.entityPath}  传递的实体
+    * @param prize  传递的实体
     * @return Ajaxresult转换结果
     */
     @RequestMapping(value="/",method= RequestMethod.POST)
-    public AjaxResult save(@RequestBody ${entity} ${table.entityPath}){
+    public AjaxResult save(@RequestBody Prize prize){
         try {
-            if(${table.entityPath}.getId()!=null){
-                ${table.entityPath}Service.updateById(${table.entityPath});
+            if(prize.getId()!=null){
+                prizeService.updateById(prize);
             }else{
-                ${table.entityPath}Service.insert(${table.entityPath});
+                prizeService.insert(prize);
             }
             return AjaxResult.me();
         } catch (Exception e) {
@@ -45,7 +45,7 @@ public class ${entity}Controller {
     @RequestMapping(value="/{id}",method=RequestMethod.DELETE)
     public AjaxResult delete(@PathVariable("id") Long id){
         try {
-            ${table.entityPath}Service.deleteById(id);
+            prizeService.deleteById(id);
             return AjaxResult.me();
         } catch (Exception e) {
         e.printStackTrace();
@@ -55,9 +55,9 @@ public class ${entity}Controller {
 
     //获取用户
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public ${entity} get(@PathVariable("id") Long id)
+    public Prize get(@PathVariable("id") Long id)
     {
-        return ${table.entityPath}Service.selectById(id);
+        return prizeService.selectById(id);
     }
 
 
@@ -66,9 +66,9 @@ public class ${entity}Controller {
     * @return
     */
     @RequestMapping(value = "/list",method = RequestMethod.GET)
-    public List<${entity}> list(){
+    public List<Prize> list(){
 
-        return ${table.entityPath}Service.selectList(null);
+        return prizeService.selectList(null);
     }
 
 
@@ -79,10 +79,10 @@ public class ${entity}Controller {
     * @return PageList 分页对象
     */
     @RequestMapping(value = "/json",method = RequestMethod.POST)
-    public PageList<${entity}> json(@RequestBody ${entity}Query query)
+    public PageList<Prize> json(@RequestBody PrizeQuery query)
     {
-        Page<${entity}> page = new Page<${entity}>(query.getPage(),query.getRows());
-            page = ${table.entityPath}Service.selectPage(page);
-            return new PageList<${entity}>(page.getTotal(),page.getRecords());
+        Page<Prize> page = new Page<Prize>(query.getPage(),query.getRows());
+            page = prizeService.selectPage(page);
+            return new PageList<Prize>(page.getTotal(),page.getRecords());
     }
 }

@@ -2,8 +2,8 @@ package com.shengyuanjun.iedraw.client;
 
 import ${package.Entity}.${entity};
 import com.shengyuanjun.iedraw.query.${entity}Query;
-import com.shengyuanjun.iedraw.util.AjaxResult;
-import com.shengyuanjun.iedraw.util.PageList;
+import com.shengyuanjun.iedraw.AjaxResult;
+import com.shengyuanjun.iedraw.PageList;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.cloud.openfeign.FeignClientsConfiguration;
 import org.springframework.web.bind.annotation.*;
