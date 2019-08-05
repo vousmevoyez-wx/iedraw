@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shengyuanjun.iedraw.mapper.PrizeRecordMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.shengyuanjun.iedraw.domain.PrizeRecord">
+        <id column="id" property="id" />
+        <result column="prizeid" property="prizeid" />
+        <result column="userid" property="userid" />
+        <result column="status" property="status" />
+        <result column="type" property="type" />
+        <result column="goodscode" property="goodscode" />
+        <result column="isdel" property="isdel" />
+        <result column="createtime" property="createtime" />
+    </resultMap>
+    
+    <select id="selectPrizeRecord" parameterType="PrizeRecordQuery" resultMap="prizeRecordMap">
+        SELECT pr.id,p.prizename pname,u.nickname,`status`,type,goodscode
+        FROM t_prize_record pr
+        LEFT JOIN t_prize p on pr.prizeid=p.id
+        LEFT JOIN t_wechat_user_info u ON pr.userid=u.id
+    </select>
+    
+    <resultMap id="prizeRecordMap" type="com.shengyuanjun.iedraw.domain.PrizeRecord">
+        <id column="id" property="id"/>
+        <result column="prizeid" property="prizeid" />
+        <result column="userid" property="userid" />
+        <result column="status" property="status" />
+        <result column="type" property="type" />
+        <result column="goodscode" property="goodscode" />
+        <result column="isdel" property="isdel" />
+        <result column="createtime" property="createtime" />
+        <association property="prize" javaType="Prize">
+            <id column="id" property="id"/>
+            <result column="prizename" property="prizename"/>
+        </association>
+        <association property="wechatUserInfo" javaType="WechatUserInfo">
+            <id column="id" property="id"/>
+            <result column="nickname" property="nickname"/>
+        </association>
+    </resultMap>
+
+</mapper>
