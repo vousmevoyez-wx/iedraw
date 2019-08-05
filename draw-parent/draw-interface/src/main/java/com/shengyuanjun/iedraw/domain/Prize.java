@@ -5,6 +5,8 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 
 /**
@@ -45,17 +47,22 @@ public class Prize extends Model<Prize> {
      * 奖品图片的url
      */
     private String pictureurl;
+    /**
+     * 中奖概率
+     */
+    private Float odds;
 
     public Prize() {
     }
 
-    public Prize(Long id, String prizename, Long stock, Date beginvalidityperiod, Date endvalidityperiod, String pictureurl) {
+    public Prize(Long id, String prizename, Long stock, Date beginvalidityperiod, Date endvalidityperiod, String pictureurl, Float odds) {
         this.id = id;
         this.prizename = prizename;
         this.stock = stock;
         this.beginvalidityperiod = beginvalidityperiod;
         this.endvalidityperiod = endvalidityperiod;
         this.pictureurl = pictureurl;
+        this.odds = odds;
     }
 
     public Long getId() {
@@ -82,6 +89,7 @@ public class Prize extends Model<Prize> {
         this.stock = stock;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public Date getBeginvalidityperiod() {
         return beginvalidityperiod;
     }
@@ -90,6 +98,7 @@ public class Prize extends Model<Prize> {
         this.beginvalidityperiod = beginvalidityperiod;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public Date getEndvalidityperiod() {
         return endvalidityperiod;
     }
@@ -106,6 +115,14 @@ public class Prize extends Model<Prize> {
         this.pictureurl = pictureurl;
     }
 
+    public Float getOdds() {
+        return odds;
+    }
+
+    public void setOdds(Float odds) {
+        this.odds = odds;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.id;
@@ -120,6 +137,7 @@ public class Prize extends Model<Prize> {
         ", beginvalidityperiod=" + beginvalidityperiod +
         ", endvalidityperiod=" + endvalidityperiod +
         ", pictureurl=" + pictureurl +
+        ", odds=" + odds +
         "}";
     }
 }

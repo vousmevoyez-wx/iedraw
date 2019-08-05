@@ -5,6 +5,9 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 
 /**
@@ -28,18 +31,39 @@ public class ActivityTime extends Model<ActivityTime> {
     /**
      * 开始活动的日期
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(
+            pattern = "yyyy-MM-dd",
+            timezone = "GMT+8"
+    )
     private Date beginactivitydate;
+
     /**
      * 结束活动的日期
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @JsonFormat(
+            pattern = "yyyy-MM-dd",
+            timezone = "GMT+8"
+    )
     private Date endactivitydate;
     /**
      * 每日活动开始时间
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(
+            pattern = "yyyy-MM-dd HH:mm:ss",
+            timezone = "GMT+8"
+    )
     private Date begindailytime;
     /**
      * 每日活动结束时间
      */
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(
+            pattern = "yyyy-MM-dd HH:mm:ss",
+            timezone = "GMT+8"
+    )
     private Date enddailytime;
 
     public ActivityTime() {
@@ -61,6 +85,7 @@ public class ActivityTime extends Model<ActivityTime> {
         this.id = id;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     public Date getBeginactivitydate() {
         return beginactivitydate;
     }
@@ -69,6 +94,7 @@ public class ActivityTime extends Model<ActivityTime> {
         this.beginactivitydate = beginactivitydate;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     public Date getEndactivitydate() {
         return endactivitydate;
     }
@@ -77,6 +103,7 @@ public class ActivityTime extends Model<ActivityTime> {
         this.endactivitydate = endactivitydate;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public Date getBegindailytime() {
         return begindailytime;
     }
@@ -85,6 +112,7 @@ public class ActivityTime extends Model<ActivityTime> {
         this.begindailytime = begindailytime;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     public Date getEnddailytime() {
         return enddailytime;
     }

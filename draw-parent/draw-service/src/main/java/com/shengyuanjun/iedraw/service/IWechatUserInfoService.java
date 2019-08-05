@@ -1,7 +1,7 @@
 package com.shengyuanjun.iedraw.service;
 
-import com.baomidou.mybatisplus.service.IService;
 import com.shengyuanjun.iedraw.domain.WechatUserInfo;
+import com.baomidou.mybatisplus.service.IService;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.shengyuanjun.iedraw.domain.WechatUserInfo;
  * </p>
  *
  * @author wx
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 public interface IWechatUserInfoService extends IService<WechatUserInfo> {
 

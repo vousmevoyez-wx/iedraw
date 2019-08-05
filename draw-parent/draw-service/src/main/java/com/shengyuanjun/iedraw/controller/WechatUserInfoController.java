@@ -1,11 +1,11 @@
 package com.shengyuanjun.iedraw.controller;
 
-import com.baomidou.mybatisplus.plugins.Page;
-import com.shengyuanjun.iedraw.AjaxResult;
-import com.shengyuanjun.iedraw.PageList;
 import com.shengyuanjun.iedraw.service.IWechatUserInfoService;
 import com.shengyuanjun.iedraw.domain.WechatUserInfo;
 import com.shengyuanjun.iedraw.query.WechatUserInfoQuery;
+import com.shengyuanjun.iedraw.AjaxResult;
+import com.shengyuanjun.iedraw.PageList;
+import com.baomidou.mybatisplus.plugins.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +14,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/wechatUserInfo")
 public class WechatUserInfoController {
-
     @Autowired
     public IWechatUserInfoService wechatUserInfoService;
 
@@ -61,6 +60,7 @@ public class WechatUserInfoController {
         return wechatUserInfoService.selectById(id);
     }
 
+
     /**
     * 查看所有信息
     * @return
@@ -70,6 +70,7 @@ public class WechatUserInfoController {
 
         return wechatUserInfoService.selectList(null);
     }
+
 
     /**
     * 分页查询数据
@@ -84,5 +85,4 @@ public class WechatUserInfoController {
             page = wechatUserInfoService.selectPage(page);
             return new PageList<WechatUserInfo>(page.getTotal(),page.getRecords());
     }
-
 }

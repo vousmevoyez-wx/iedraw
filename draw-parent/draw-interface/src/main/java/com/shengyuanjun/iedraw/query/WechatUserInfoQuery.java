@@ -5,7 +5,7 @@ import com.shengyuanjun.iedraw.BaseQuery;
 /**
  *
  * @author wx
- * @since 2019-08-02
+ * @since 2019-08-03
  */
-public class WechatUserInfoQuery extends BaseQuery {
+public class WechatUserInfoQuery extends BaseQuery{
 }

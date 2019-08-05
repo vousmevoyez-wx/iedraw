@@ -10,6 +10,7 @@
         <result column="beginvalidityperiod" property="beginvalidityperiod" />
         <result column="endvalidityperiod" property="endvalidityperiod" />
         <result column="pictureurl" property="pictureurl" />
+        <result column="odds" property="odds" />
     </resultMap>
 
 </mapper>

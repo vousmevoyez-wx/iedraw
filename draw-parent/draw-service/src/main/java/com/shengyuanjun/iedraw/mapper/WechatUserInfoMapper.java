@@ -1,7 +1,7 @@
 package com.shengyuanjun.iedraw.mapper;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.shengyuanjun.iedraw.domain.WechatUserInfo;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.shengyuanjun.iedraw.domain.WechatUserInfo;
  * </p>
  *
  * @author wx
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 public interface WechatUserInfoMapper extends BaseMapper<WechatUserInfo> {
 

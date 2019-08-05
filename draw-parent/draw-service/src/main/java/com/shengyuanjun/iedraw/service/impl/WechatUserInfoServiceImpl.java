@@ -1,9 +1,9 @@
 package com.shengyuanjun.iedraw.service.impl;
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.shengyuanjun.iedraw.domain.WechatUserInfo;
 import com.shengyuanjun.iedraw.mapper.WechatUserInfoMapper;
 import com.shengyuanjun.iedraw.service.IWechatUserInfoService;
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author wx
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 @Service
 public class WechatUserInfoServiceImpl extends ServiceImpl<WechatUserInfoMapper, WechatUserInfo> implements IWechatUserInfoService {

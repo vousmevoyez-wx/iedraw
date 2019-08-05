@@ -18,6 +18,11 @@ spring:
       discovery:
         enabled: true #从eureka上面找配置服务
         service-id: iedraw-config
+  #上传的文件大小限制
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
 server:
   #tomcat:
   #max-http-post-size: -1

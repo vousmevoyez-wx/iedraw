@@ -18,6 +18,21 @@ spring:
         enabled: true #从eureka上面找配置服务
         service-id: iedraw-config #指定服务名
         #uri: http://127.0.0.1:1299 #配置服务器 单机配置
+  #上传的文件大小限制
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+zuul:
+  ignored-services: "*"
+  prefix: "/services"
+  routes: #路由的配置
+    user.serviceId: plat-parent
+    user.path: /plat/**
+    draw.serviceId: iedraw-parent
+    draw.path: /draw/**
+    common.serviceId: iedraw-common
+    common.path: /common/**
 #设置网关的超时时间
 ribbon:
   ReadTimeout: 5000

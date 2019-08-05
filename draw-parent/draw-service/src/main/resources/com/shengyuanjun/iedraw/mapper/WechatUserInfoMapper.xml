@@ -10,6 +10,7 @@
         <result column="nickname" property="nickname" />
         <result column="sex" property="sex" />
         <result column="headimgurl" property="headimgurl" />
+        <result column="createtime" property="createtime" />
     </resultMap>
 
 </mapper>

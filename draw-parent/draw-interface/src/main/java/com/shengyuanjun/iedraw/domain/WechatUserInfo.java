@@ -1,7 +1,12 @@
 package com.shengyuanjun.iedraw.domain;
 
+import com.baomidou.mybatisplus.enums.IdType;
+import java.util.Date;
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 
@@ -11,7 +16,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author wx
- * @since 2019-08-02
+ * @since 2019-08-03
  */
 @TableName("t_wechat_user_info")
 public class WechatUserInfo extends Model<WechatUserInfo> {
@@ -21,6 +26,7 @@ public class WechatUserInfo extends Model<WechatUserInfo> {
     /**
      * 用户的唯一标识
      */
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
     /**
      * 是否订阅公众号，0为未关注
@@ -39,19 +45,31 @@ public class WechatUserInfo extends Model<WechatUserInfo> {
      */
     private Integer sex;
 
-    //用户头像的url地址
+    /**
+     * 用户的头像
+     */
     private String headimgurl;
+    /**
+     * 创建纪录的时间
+     */
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(
+            pattern = "yyyy-MM-dd HH:mm:ss",
+            timezone = "GMT+8"
+    )
+    private Date createtime;
 
     public WechatUserInfo() {
     }
 
-    public WechatUserInfo(Long id, Integer subscribe, String openid, String nickname, Integer sex, String headimgurl) {
+    public WechatUserInfo(Long id, Integer subscribe, String openid, String nickname, Integer sex, String headimgurl, Date createtime) {
         this.id = id;
         this.subscribe = subscribe;
         this.openid = openid;
         this.nickname = nickname;
         this.sex = sex;
         this.headimgurl = headimgurl;
+        this.createtime = createtime;
     }
 
     public Long getId() {
@@ -102,6 +120,15 @@ public class WechatUserInfo extends Model<WechatUserInfo> {
         this.headimgurl = headimgurl;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
+    }
+
     @Override
     protected Serializable pkVal() {
         return this.id;
@@ -116,6 +143,7 @@ public class WechatUserInfo extends Model<WechatUserInfo> {
         ", nickname=" + nickname +
         ", sex=" + sex +
         ", headimgurl=" + headimgurl +
+        ", createtime=" + createtime +
         "}";
     }
 }
