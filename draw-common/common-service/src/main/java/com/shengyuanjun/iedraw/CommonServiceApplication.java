@@ -28,4 +28,3 @@ public class CommonServiceApplication {
         return factory.createMultipartConfig();
     }
 }
-

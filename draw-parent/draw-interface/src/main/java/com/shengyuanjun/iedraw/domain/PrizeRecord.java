@@ -1,13 +1,9 @@
 package com.shengyuanjun.iedraw.domain;
 
 import com.baomidou.mybatisplus.enums.IdType;
-import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.io.Serializable;
 
 /**
@@ -16,7 +12,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author wx
- * @since 2019-08-03
+ * @since 2019-08-06
  */
 @TableName("t_prize_record")
 public class PrizeRecord extends Model<PrizeRecord> {
@@ -55,12 +51,7 @@ public class PrizeRecord extends Model<PrizeRecord> {
     /**
      * 创建纪录的时间
      */
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(
-            pattern = "yyyy-MM-dd HH:mm:ss",
-            timezone = "GMT+8"
-    )
-    private Date createtime;
+    private Long createtime;
 
 
     public Long getId() {
@@ -119,12 +110,11 @@ public class PrizeRecord extends Model<PrizeRecord> {
         this.isdel = isdel;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    public Date getCreatetime() {
+    public Long getCreatetime() {
         return createtime;
     }
 
-    public void setCreatetime(Date createtime) {
+    public void setCreatetime(Long createtime) {
         this.createtime = createtime;
     }
 

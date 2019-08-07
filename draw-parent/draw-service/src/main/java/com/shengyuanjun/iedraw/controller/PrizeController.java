@@ -1,5 +1,7 @@
 package com.shengyuanjun.iedraw.controller;
 
+import com.shengyuanjun.iedraw.domain.WechatUserInfo;
+import com.shengyuanjun.iedraw.service.IParticipationRestrictionService;
 import com.shengyuanjun.iedraw.service.IPrizeService;
 import com.shengyuanjun.iedraw.domain.Prize;
 import com.shengyuanjun.iedraw.query.PrizeQuery;
@@ -14,8 +16,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/prize")
 public class PrizeController {
+
     @Autowired
     public IPrizeService prizeService;
+
+    @Autowired
+    public IParticipationRestrictionService iParticipationRestrictionService;
 
     /**
     * 保存和修改公用的
@@ -60,17 +66,14 @@ public class PrizeController {
         return prizeService.selectById(id);
     }
 
-
     /**
     * 查看所有信息
     * @return
     */
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<Prize> list(){
-
         return prizeService.selectList(null);
     }
-
 
     /**
     * 分页查询数据
@@ -85,4 +88,15 @@ public class PrizeController {
             page = prizeService.selectPage(page);
             return new PageList<Prize>(page.getTotal(),page.getRecords());
     }
+
+    /**
+     *  抽奖
+     * @return
+     */
+    @RequestMapping(value = "/drawPrize",method = RequestMethod.GET)
+    public AjaxResult drawPrize(@PathVariable("id") Long id){
+        prizeService.selectById(id);
+        return null;
+    }
+
 }

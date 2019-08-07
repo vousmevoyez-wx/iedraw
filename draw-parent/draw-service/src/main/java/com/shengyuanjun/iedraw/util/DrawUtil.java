@@ -54,18 +54,18 @@ public class DrawUtil {
         List<Prize> prizes = new ArrayList<Prize>();
 
         Prize p1 = new Prize();
-        p1.setPrizename("范冰冰海报");
-        p1.setOdds((float) 0.001);//奖品的权重设置成1
+        p1.setPrizename("私人订制提货码");
+        p1.setOdds((float) 0.001);//奖品的权重设置成0.001
         prizes.add(p1);
 
         Prize p2 = new Prize();
-        p2.setPrizename("上海紫园1号别墅");
-        p2.setOdds((float) 1);//奖品的权重设置成2
+        p2.setPrizename("二维码");
+        p2.setOdds((float) 1);//奖品的权重设置成1
         prizes.add(p2);
 
         Prize p3 = new Prize();
-        p3.setPrizename("奥迪a9");
-        p3.setOdds((float) 2);//奖品的权重设置成3
+        p3.setPrizename("优惠券");
+        p3.setOdds((float) 2);//奖品的权重设置成2
         prizes.add(p3);
 
         Prize p4 = new Prize();

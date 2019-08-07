@@ -71,6 +71,7 @@ public class PrizeRecordController {
         return prizeRecordService.selectList(null);
     }
 
+
     /**
     * 分页查询数据
     *

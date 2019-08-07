@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author wx
- * @since 2019-08-03
+ * @since 2019-08-06
  */
 @Service
 public class PrizeRecordServiceImpl extends ServiceImpl<PrizeRecordMapper, PrizeRecord> implements IPrizeRecordService {

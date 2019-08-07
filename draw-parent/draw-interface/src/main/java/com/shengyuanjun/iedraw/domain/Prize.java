@@ -1,12 +1,9 @@
 package com.shengyuanjun.iedraw.domain;
 
 import com.baomidou.mybatisplus.enums.IdType;
-import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.io.Serializable;
 
 /**
@@ -15,7 +12,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author wx
- * @since 2019-08-03
+ * @since 2019-08-06
  */
 @TableName("t_prize")
 public class Prize extends Model<Prize> {
@@ -38,11 +35,11 @@ public class Prize extends Model<Prize> {
     /**
      * 奖品有效期开始时间
      */
-    private Date beginvalidityperiod;
+    private Long beginvalidityperiod;
     /**
      * 奖品有效期结束时间
      */
-    private Date endvalidityperiod;
+    private Long endvalidityperiod;
     /**
      * 奖品图片的url
      */
@@ -52,18 +49,6 @@ public class Prize extends Model<Prize> {
      */
     private Float odds;
 
-    public Prize() {
-    }
-
-    public Prize(Long id, String prizename, Long stock, Date beginvalidityperiod, Date endvalidityperiod, String pictureurl, Float odds) {
-        this.id = id;
-        this.prizename = prizename;
-        this.stock = stock;
-        this.beginvalidityperiod = beginvalidityperiod;
-        this.endvalidityperiod = endvalidityperiod;
-        this.pictureurl = pictureurl;
-        this.odds = odds;
-    }
 
     public Long getId() {
         return id;
@@ -89,21 +74,19 @@ public class Prize extends Model<Prize> {
         this.stock = stock;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    public Date getBeginvalidityperiod() {
+    public Long getBeginvalidityperiod() {
         return beginvalidityperiod;
     }
 
-    public void setBeginvalidityperiod(Date beginvalidityperiod) {
+    public void setBeginvalidityperiod(Long beginvalidityperiod) {
         this.beginvalidityperiod = beginvalidityperiod;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    public Date getEndvalidityperiod() {
+    public Long getEndvalidityperiod() {
         return endvalidityperiod;
     }
 
-    public void setEndvalidityperiod(Date endvalidityperiod) {
+    public void setEndvalidityperiod(Long endvalidityperiod) {
         this.endvalidityperiod = endvalidityperiod;
     }
 

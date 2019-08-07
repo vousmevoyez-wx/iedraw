@@ -1,22 +1,18 @@
 package com.shengyuanjun.iedraw.domain;
 
 import com.baomidou.mybatisplus.enums.IdType;
-import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.io.Serializable;
 
 /**
  * <p>
- *      活动时间
+ * 
  * </p>
  *
  * @author wx
- * @since 2019-08-03
+ * @since 2019-08-06
  */
 @TableName("t_activity_time")
 public class ActivityTime extends Model<ActivityTime> {
@@ -31,51 +27,20 @@ public class ActivityTime extends Model<ActivityTime> {
     /**
      * 开始活动的日期
      */
-    @DateTimeFormat(pattern="yyyy-MM-dd")
-    @JsonFormat(
-            pattern = "yyyy-MM-dd",
-            timezone = "GMT+8"
-    )
-    private Date beginactivitydate;
-
+    private Long beginactivitydate;
     /**
      * 结束活动的日期
      */
-    @DateTimeFormat(pattern="yyyy-MM-dd")
-    @JsonFormat(
-            pattern = "yyyy-MM-dd",
-            timezone = "GMT+8"
-    )
-    private Date endactivitydate;
+    private Long endactivitydate;
     /**
      * 每日活动开始时间
      */
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(
-            pattern = "yyyy-MM-dd HH:mm:ss",
-            timezone = "GMT+8"
-    )
-    private Date begindailytime;
+    private Long begindailytime;
     /**
      * 每日活动结束时间
      */
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    @JsonFormat(
-            pattern = "yyyy-MM-dd HH:mm:ss",
-            timezone = "GMT+8"
-    )
-    private Date enddailytime;
+    private Long enddailytime;
 
-    public ActivityTime() {
-    }
-
-    public ActivityTime(Long id, Date beginactivitydate, Date endactivitydate, Date begindailytime, Date enddailytime) {
-        this.id = id;
-        this.beginactivitydate = beginactivitydate;
-        this.endactivitydate = endactivitydate;
-        this.begindailytime = begindailytime;
-        this.enddailytime = enddailytime;
-    }
 
     public Long getId() {
         return id;
@@ -85,39 +50,35 @@ public class ActivityTime extends Model<ActivityTime> {
         this.id = id;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    public Date getBeginactivitydate() {
+    public Long getBeginactivitydate() {
         return beginactivitydate;
     }
 
-    public void setBeginactivitydate(Date beginactivitydate) {
+    public void setBeginactivitydate(Long beginactivitydate) {
         this.beginactivitydate = beginactivitydate;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    public Date getEndactivitydate() {
+    public Long getEndactivitydate() {
         return endactivitydate;
     }
 
-    public void setEndactivitydate(Date endactivitydate) {
+    public void setEndactivitydate(Long endactivitydate) {
         this.endactivitydate = endactivitydate;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    public Date getBegindailytime() {
+    public Long getBegindailytime() {
         return begindailytime;
     }
 
-    public void setBegindailytime(Date begindailytime) {
+    public void setBegindailytime(Long begindailytime) {
         this.begindailytime = begindailytime;
     }
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    public Date getEnddailytime() {
+    public Long getEnddailytime() {
         return enddailytime;
     }
 
-    public void setEnddailytime(Date enddailytime) {
+    public void setEnddailytime(Long enddailytime) {
         this.enddailytime = enddailytime;
     }
 

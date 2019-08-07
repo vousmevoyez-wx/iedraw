@@ -60,6 +60,7 @@ public class ActivityTimeController {
         return activityTimeService.selectById(id);
     }
 
+
     /**
     * 查看所有信息
     * @return
@@ -69,6 +70,7 @@ public class ActivityTimeController {
 
         return activityTimeService.selectList(null);
     }
+
 
     /**
     * 分页查询数据
