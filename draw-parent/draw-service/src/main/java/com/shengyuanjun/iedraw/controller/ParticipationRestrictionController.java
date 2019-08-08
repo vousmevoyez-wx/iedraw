@@ -60,6 +60,7 @@ public class ParticipationRestrictionController {
         return participationRestrictionService.selectById(id);
     }
 
+
     /**
     * 查看所有信息
     * @return
@@ -69,6 +70,7 @@ public class ParticipationRestrictionController {
 
         return participationRestrictionService.selectList(null);
     }
+
 
     /**
     * 分页查询数据
@@ -84,5 +86,12 @@ public class ParticipationRestrictionController {
             return new PageList<ParticipationRestriction>(page.getTotal(),page.getRecords());
     }
 
+    /**
+     *  地理围栏判断距离
+     * @return
+     */
+    public AjaxResult geographical(){
+        return null;
+    }
 
 }

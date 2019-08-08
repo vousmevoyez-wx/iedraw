@@ -9,6 +9,10 @@
         <result column="dayparticipation" property="dayparticipation" />
         <result column="totalwinningprize" property="totalwinningprize" />
         <result column="daywinningprize" property="daywinningprize" />
+        <result column="linkurls" property="linkurls" />
+        <result column="noprize" property="noprize" />
+        <result column="exceeddaily" property="exceeddaily" />
+        <result column="exceedtotal" property="exceedtotal" />
         <result column="longitude" property="longitude" />
         <result column="latitude" property="latitude" />
         <result column="range" property="range" />

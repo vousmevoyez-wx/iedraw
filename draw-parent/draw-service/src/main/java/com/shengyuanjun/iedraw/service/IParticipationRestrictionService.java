@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.service.IService;
  * </p>
  *
  * @author wx
- * @since 2019-08-03
+ * @since 2019-08-07
  */
 public interface IParticipationRestrictionService extends IService<ParticipationRestriction> {
 

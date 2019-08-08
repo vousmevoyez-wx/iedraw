@@ -12,7 +12,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author wx
- * @since 2019-08-03
+ * @since 2019-08-07
  */
 @TableName("t_participation_restriction")
 public class ParticipationRestriction extends Model<ParticipationRestriction> {
@@ -41,6 +41,22 @@ public class ParticipationRestriction extends Model<ParticipationRestriction> {
      */
     private String daywinningprize;
     /**
+     * 优惠券的链接设置
+     */
+    private String linkurls;
+    /**
+     * 未中奖的提示
+     */
+    private String noprize;
+    /**
+     * 超出每日限制的提示
+     */
+    private String exceeddaily;
+    /**
+     * 超出总参与次数的提示
+     */
+    private String exceedtotal;
+    /**
      * 电子围栏的经度
      */
     private String longitude;
@@ -51,23 +67,8 @@ public class ParticipationRestriction extends Model<ParticipationRestriction> {
     /**
      * 电子围栏的范围
      */
-    private Integer range;
+    private String range;
 
-    public ParticipationRestriction() {
-    }
-
-    public ParticipationRestriction(Long id, String totalparticipants, String dayparticipation,
-                                    String totalwinningprize, String daywinningprize,
-                                    String longitude, String latitude, Integer range) {
-        this.id = id;
-        this.totalparticipants = totalparticipants;
-        this.dayparticipation = dayparticipation;
-        this.totalwinningprize = totalwinningprize;
-        this.daywinningprize = daywinningprize;
-        this.longitude = longitude;
-        this.latitude = latitude;
-        this.range = range;
-    }
 
     public Long getId() {
         return id;
@@ -109,6 +110,38 @@ public class ParticipationRestriction extends Model<ParticipationRestriction> {
         this.daywinningprize = daywinningprize;
     }
 
+    public String getLinkurls() {
+        return linkurls;
+    }
+
+    public void setLinkurls(String linkurls) {
+        this.linkurls = linkurls;
+    }
+
+    public String getNoprize() {
+        return noprize;
+    }
+
+    public void setNoprize(String noprize) {
+        this.noprize = noprize;
+    }
+
+    public String getExceeddaily() {
+        return exceeddaily;
+    }
+
+    public void setExceeddaily(String exceeddaily) {
+        this.exceeddaily = exceeddaily;
+    }
+
+    public String getExceedtotal() {
+        return exceedtotal;
+    }
+
+    public void setExceedtotal(String exceedtotal) {
+        this.exceedtotal = exceedtotal;
+    }
+
     public String getLongitude() {
         return longitude;
     }
@@ -125,11 +158,11 @@ public class ParticipationRestriction extends Model<ParticipationRestriction> {
         this.latitude = latitude;
     }
 
-    public Integer getRange() {
+    public String getRange() {
         return range;
     }
 
-    public void setRange(Integer range) {
+    public void setRange(String range) {
         this.range = range;
     }
 
@@ -146,6 +179,10 @@ public class ParticipationRestriction extends Model<ParticipationRestriction> {
         ", dayparticipation=" + dayparticipation +
         ", totalwinningprize=" + totalwinningprize +
         ", daywinningprize=" + daywinningprize +
+        ", linkurls=" + linkurls +
+        ", noprize=" + noprize +
+        ", exceeddaily=" + exceeddaily +
+        ", exceedtotal=" + exceedtotal +
         ", longitude=" + longitude +
         ", latitude=" + latitude +
         ", range=" + range +

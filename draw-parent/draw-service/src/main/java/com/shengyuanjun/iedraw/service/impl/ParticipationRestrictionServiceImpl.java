@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author wx
- * @since 2019-08-03
+ * @since 2019-08-07
  */
 @Service
 public class ParticipationRestrictionServiceImpl extends ServiceImpl<ParticipationRestrictionMapper, ParticipationRestriction> implements IParticipationRestrictionService {
