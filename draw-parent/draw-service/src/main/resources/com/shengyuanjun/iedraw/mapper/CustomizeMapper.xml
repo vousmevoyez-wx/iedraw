@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shengyuanjun.iedraw.mapper.CustomizeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.shengyuanjun.iedraw.domain.Customize">
+        <id column="id" property="id" />
+        <result column="customizetime" property="customizetime" />
+        <result column="goodscode" property="goodscode" />
+        <result column="printchart" property="printchart" />
+        <result column="printstatus" property="printstatus" />
+        <result column="createtime" property="createtime" />
+    </resultMap>
+
+    <select id="selectByQuery" resultMap="BaseResultMap">
+        select id,c.customizetime,c.goodscode,printchart,printstatus,createtime
+        from t_customize c
+        <where>
+            <if test="cq.keyword!=null and cq.keyword!=''">
+                and (
+                c.goodscode like concat('%',#{cq.keyword},'%') or
+                c.customizetime like concat('%',#{cq.keyword},'%')
+                )
+            </if>
+        </where>
+    </select>
+</mapper>
