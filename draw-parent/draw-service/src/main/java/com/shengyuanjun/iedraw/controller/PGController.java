@@ -259,18 +259,18 @@ public class PGController {
 
         System.out.println("定位确认");
 
-        //String longitude0 =  request.getParameter("longitude");
-        //String latitude0 =  request.getParameter("latitude");
+        String longitude0 =  request.getParameter("longitude");
+        String latitude0 =  request.getParameter("latitude");
 
         //判断范围
         ParticipationRestriction par = participationRestrictionServiceImpl.selectParticipationRestrictionById(Long.parseLong("3"));
         String range = par.getRange();//系统范围
-        /*System.out.println("td = " + longitude0);
+        System.out.println("td = " + longitude0);
         System.out.println("ti = " + latitude0);
         Double la = Double.parseDouble(par.getLatitude()) - Double.parseDouble(latitude0);
-        Double gi = Double.parseDouble(par.getLongitude()) - Double.parseDouble(longitude0);*/
+        Double gi = Double.parseDouble(par.getLongitude()) - Double.parseDouble(longitude0);
         //判断是否在活动的地图范围内
-       // if ((la * la + gi * gi) < Double.parseDouble(par.getRange()) * Double.parseDouble(par.getRange())) {
+       if ((la * la + gi * gi) < Double.parseDouble(par.getRange()) * Double.parseDouble(par.getRange())) {
             logger.info("判断的值在范围以内");
             HttpSession session = request.getSession();
             //zaisession中获取openid来查询用户信息
@@ -421,12 +421,12 @@ public class PGController {
                 map.put("allup", "true");
                 return map;
             }
-       /* } else {
+       } else {
             System.out.println("超出活动区域");
             //超出活动区域
             map.put("area", "out");
             return map;
-        }*/
+        }
     }
 
     /**

@@ -77,6 +77,11 @@ public class GenerateCode {
         }
         // 生成二维码
         try {
+            File tempFile = new File("/user/jxb/" + from);
+            if (!tempFile.exists()) {
+
+                tempFile.mkdirs();
+            }
             ImageIO.write(image, format, new File("/"+from+"/"+name+".png"));
         } catch (IOException e) {
             e.printStackTrace();
