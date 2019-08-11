@@ -13,4 +13,19 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface ParticipationRestrictionMapper extends BaseMapper<ParticipationRestriction> {
 
+    String selectlinkurls();
+
+    ParticipationRestriction selectByPrimaryKey(Long id);
+
+
+    int deleteByPrimaryKey(Long id);
+
+    Integer insert(ParticipationRestriction record);
+
+    int insertSelective(ParticipationRestriction record);
+
+
+    int updateByPrimaryKeySelective(ParticipationRestriction record);
+
+    int updateByPrimaryKey(ParticipationRestriction record);
 }

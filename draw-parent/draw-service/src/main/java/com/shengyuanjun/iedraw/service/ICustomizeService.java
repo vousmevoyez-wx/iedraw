@@ -18,4 +18,9 @@ public interface ICustomizeService extends IService<Customize> {
 
     PageList<Customize> selectCustomizePage(CustomizeQuery query);
 
+
+    public int addCustomize(Customize cu);
+
+    public Customize selectCustomizeById(Long quotationsstatus);
+
 }

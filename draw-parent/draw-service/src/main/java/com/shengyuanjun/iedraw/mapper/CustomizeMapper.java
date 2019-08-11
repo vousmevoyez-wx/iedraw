@@ -1,6 +1,5 @@
 package com.shengyuanjun.iedraw.mapper;
 
-import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 import com.shengyuanjun.iedraw.domain.Customize;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
@@ -21,5 +20,17 @@ public interface CustomizeMapper extends BaseMapper<Customize> {
 
     //将page作为第一个参数，分页关键字查询
     List<Customize> selectByQuery(Page<Customize> page, @Param("cq")CustomizeQuery query);
+
+    int deleteByPrimaryKey(Long id);
+
+    Integer insert(Customize record);
+
+    int insertSelective(Customize record);
+
+    Customize selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(Customize record);
+
+    int updateByPrimaryKey(Customize record);
 
 }

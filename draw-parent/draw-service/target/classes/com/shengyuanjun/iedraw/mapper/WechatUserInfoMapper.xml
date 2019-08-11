@@ -12,5 +12,14 @@
         <result column="headimgurl" property="headimgurl" />
         <result column="createtime" property="createtime" />
     </resultMap>
+    
+    <select id="selectByQuery" resultMap="BaseResultMap">
+        select * from t_wechat_user_info
+        <where>
+            <if test="wq.keyword!=null and wq.keyword!=''">
+                and (nickname like concat ('%',#{wq.keyword},'%'))
+            </if>
+        </where>
+    </select>
 
 </mapper>

@@ -6,6 +6,9 @@ import com.shengyuanjun.iedraw.service.IQuotationsService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 /**
  * <p>
  *  服务实现类
@@ -16,5 +19,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class QuotationsServiceImpl extends ServiceImpl<QuotationsMapper, Quotations> implements IQuotationsService {
+    @Resource
+    private QuotationsMapper quotationsMapper;
 
+    @Override
+    public List<Quotations> selectQuotationsByStatus(Long statu) {
+        return quotationsMapper.selectByStatus(statu);
+    }
 }

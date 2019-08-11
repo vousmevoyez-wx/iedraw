@@ -12,7 +12,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author wx
- * @since 2019-08-06
+ * @since 2019-08-08
  */
 @TableName("t_wechat_user_info")
 public class WechatUserInfo extends Model<WechatUserInfo> {
@@ -40,6 +40,9 @@ public class WechatUserInfo extends Model<WechatUserInfo> {
      * 性别，1为男，2为女，0为未知
      */
     private Integer sex;
+    /**
+     * 用户头像的地址
+     */
     private String headimgurl;
     /**
      * 创建纪录的时间

@@ -2,6 +2,10 @@ package com.shengyuanjun.iedraw.mapper;
 
 import com.shengyuanjun.iedraw.domain.Prize;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.shengyuanjun.iedraw.query.PrizeQuery;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +17,21 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface PrizeMapper extends BaseMapper<Prize> {
 
+    List<Prize> selectPrize();
+
+    int deleteByPrimaryKey(Long id);
+
+    Integer insert(Prize record);
+
+    int insertSelective(Prize record);
+
+    Prize selectByPrimaryKey(Long id);
+
+    int updateByPrimaryKeySelective(Prize record);
+
+    int updateByPrimaryKey(Prize record);
+
+    List<Prize> selectCouponsByQuery(PrizeQuery query);
+
+    ArrayList<Prize> selectAll();
 }

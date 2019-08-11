@@ -1,7 +1,9 @@
 package com.shengyuanjun.iedraw.service;
 
-import com.shengyuanjun.iedraw.domain.WechatUserInfo;
 import com.baomidou.mybatisplus.service.IService;
+import com.shengyuanjun.iedraw.PageList;
+import com.shengyuanjun.iedraw.domain.WechatUserInfo;
+import com.shengyuanjun.iedraw.query.WechatUserInfoQuery;
 
 /**
  * <p>
@@ -9,8 +11,9 @@ import com.baomidou.mybatisplus.service.IService;
  * </p>
  *
  * @author wx
- * @since 2019-08-06
+ * @since 2019-08-08
  */
 public interface IWechatUserInfoService extends IService<WechatUserInfo> {
 
+    PageList<WechatUserInfo> selectByQuery(WechatUserInfoQuery query);
 }

@@ -1,5 +1,6 @@
 package com.shengyuanjun.iedraw.controller;
 
+import com.shengyuanjun.iedraw.mapper.WechatUserInfoMapper;
 import com.shengyuanjun.iedraw.service.IWechatUserInfoService;
 import com.shengyuanjun.iedraw.domain.WechatUserInfo;
 import com.shengyuanjun.iedraw.query.WechatUserInfoQuery;
@@ -81,8 +82,9 @@ public class WechatUserInfoController {
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public PageList<WechatUserInfo> json(@RequestBody WechatUserInfoQuery query)
     {
-        Page<WechatUserInfo> page = new Page<WechatUserInfo>(query.getPage(),query.getRows());
-            page = wechatUserInfoService.selectPage(page);
-            return new PageList<WechatUserInfo>(page.getTotal(),page.getRecords());
+//        Page<WechatUserInfo> page = new Page<>(query.getPage(),query.getRows());
+//        List<WechatUserInfo> list = wechatUserInfoService.selectByQuery(page,query);
+//        return new PageList<WechatUserInfo>(page.getTotal(),list);
+        return wechatUserInfoService.selectByQuery(query);
     }
 }

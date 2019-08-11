@@ -24,4 +24,99 @@
             </if>
         </where>
     </select>
+
+    <sql id="Base_Column_List">
+    id, customizetime, goodscode, printchart, printstatus, createtime
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_customize
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from t_customize
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.shengyuanjun.iedraw.domain.Customize">
+    insert into t_customize (id, customizetime, goodscode,
+      printchart, printstatus, createtime
+      )
+    values (#{id,jdbcType=BIGINT}, #{customizetime,jdbcType=BIGINT}, #{goodscode,jdbcType=VARCHAR},
+      #{printchart,jdbcType=VARCHAR}, #{printstatus,jdbcType=TINYINT}, #{createtime,jdbcType=BIGINT}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.shengyuanjun.iedraw.domain.Customize">
+        insert into t_customize
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="customizetime != null">
+                customizetime,
+            </if>
+            <if test="goodscode != null">
+                goodscode,
+            </if>
+            <if test="printchart != null">
+                printchart,
+            </if>
+            <if test="printstatus != null">
+                printstatus,
+            </if>
+            <if test="createtime != null">
+                createtime,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="customizetime != null">
+                #{customizetime,jdbcType=BIGINT},
+            </if>
+            <if test="goodscode != null">
+                #{goodscode,jdbcType=VARCHAR},
+            </if>
+            <if test="printchart != null">
+                #{printchart,jdbcType=VARCHAR},
+            </if>
+            <if test="printstatus != null">
+                #{printstatus,jdbcType=TINYINT},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=BIGINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.shengyuanjun.iedraw.domain.Customize">
+        update t_customize
+        <set>
+            <if test="customizetime != null">
+                customizetime = #{customizetime,jdbcType=BIGINT},
+            </if>
+            <if test="goodscode != null">
+                goodscode = #{goodscode,jdbcType=VARCHAR},
+            </if>
+            <if test="printchart != null">
+                printchart = #{printchart,jdbcType=VARCHAR},
+            </if>
+            <if test="printstatus != null">
+                printstatus = #{printstatus,jdbcType=TINYINT},
+            </if>
+            <if test="createtime != null">
+                createtime = #{createtime,jdbcType=BIGINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.shengyuanjun.iedraw.domain.Customize">
+    update t_customize
+    set customizetime = #{customizetime,jdbcType=BIGINT},
+      goodscode = #{goodscode,jdbcType=VARCHAR},
+      printchart = #{printchart,jdbcType=VARCHAR},
+      printstatus = #{printstatus,jdbcType=TINYINT},
+      createtime = #{createtime,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
 </mapper>

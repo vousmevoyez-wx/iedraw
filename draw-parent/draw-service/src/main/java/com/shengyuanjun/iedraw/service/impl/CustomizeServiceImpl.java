@@ -36,4 +36,14 @@ public class CustomizeServiceImpl extends ServiceImpl<CustomizeMapper, Customize
         PageList<Customize> pageList = new PageList<Customize>(page.getTotal(), list);
         return pageList;
     }
+
+    @Override
+    public int addCustomize(Customize cu) {
+        return customizeMapper.insertSelective(cu);
+    }
+
+    @Override
+    public Customize selectCustomizeById(Long quotationsstatus) {
+        return customizeMapper.selectByPrimaryKey(quotationsstatus);
+    }
 }

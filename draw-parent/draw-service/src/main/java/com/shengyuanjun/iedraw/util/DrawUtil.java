@@ -12,7 +12,7 @@ public class DrawUtil {
      * @param prizes
      * @return random：奖品列表prizes中的序列（prizes中的第random个就是抽中的奖品）
      */
-    public int getPrizeIndex(List<Prize> prizes) {
+    public static int getPrizeIndex(List<Prize> prizes) {
         DecimalFormat df = new DecimalFormat("######0.00");
         int random = -1;
         try{
@@ -68,10 +68,6 @@ public class DrawUtil {
         p3.setOdds((float) 2);//奖品的权重设置成2
         prizes.add(p3);
 
-        Prize p4 = new Prize();
-        p4.setPrizename("双色球彩票");
-        p4.setOdds((float) 4);//奖品的权重设置成4
-        prizes.add(p4);
 
         System.out.println("抽奖开始");
         for (i = 0; i < 10000; i++)// 打印100个测试概率的准确性
@@ -86,6 +82,5 @@ public class DrawUtil {
         System.out.println("一等奖："+result[0]);
         System.out.println("二等奖："+result[1]);
         System.out.println("三等奖："+result[2]);
-        System.out.println("四等奖："+result[3]);
     }
 }

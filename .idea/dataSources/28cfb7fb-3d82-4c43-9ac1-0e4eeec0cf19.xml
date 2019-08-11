@@ -916,13 +916,22 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="230" parent="3" name="t_activity_time"/>
-    <table id="231" parent="3" name="t_participation_restriction"/>
-    <table id="232" parent="3" name="t_participation_tip"/>
-    <table id="233" parent="3" name="t_prize"/>
-    <table id="234" parent="3" name="t_wechat_user_info">
+    <table id="231" parent="3" name="t_customize">
+      <Comment>定制纪录表</Comment>
+    </table>
+    <table id="232" parent="3" name="t_participation_restriction">
+      <Comment>参与次数的限制及电子围栏</Comment>
+    </table>
+    <table id="233" parent="3" name="t_prize">
+      <Comment>奖品表</Comment>
+    </table>
+    <table id="234" parent="3" name="t_prize_record">
+      <Comment>中奖纪录表</Comment>
+    </table>
+    <table id="235" parent="3" name="t_wechat_user_info">
       <Comment>微信用户的基本信息</Comment>
     </table>
-    <column id="235" parent="230" name="id">
+    <column id="236" parent="230" name="id">
       <Position>1</Position>
       <Comment>活动时间的主键</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -930,36 +939,79 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="230" name="beginactivitydate">
+    <column id="237" parent="230" name="beginactivitydate">
       <Position>2</Position>
       <Comment>开始活动的日期</Comment>
-      <DataType>date|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="230" name="endactivitydate">
+    <column id="238" parent="230" name="endactivitydate">
       <Position>3</Position>
       <Comment>结束活动的日期</Comment>
-      <DataType>date|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="230" name="begindailytime">
+    <column id="239" parent="230" name="begindailytime">
       <Position>4</Position>
       <Comment>每日活动开始时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="230" name="enddailytime">
+    <column id="240" parent="230" name="enddailytime">
       <Position>5</Position>
       <Comment>每日活动结束时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="240" parent="230" name="PRIMARY">
+    <key id="241" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="241" parent="231" name="id">
+    <column id="242" parent="231" name="id">
+      <Position>1</Position>
+      <Comment>私人订制的主键</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="231" name="customizetime">
+      <Position>2</Position>
+      <Comment>定制时间</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="231" name="goodscode">
+      <Position>3</Position>
+      <Comment>提货码</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="245" parent="231" name="printchart">
+      <Position>4</Position>
+      <Comment>打印图</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="246" parent="231" name="printstatus">
+      <Position>5</Position>
+      <Comment>打印状态，0为未打印，1为已打印，2为已失效，3为打印失败</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="231" name="createtime">
+      <Position>6</Position>
+      <Comment>创建表纪录的时间</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="248" parent="231" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="249" parent="232" name="id">
       <Position>1</Position>
       <Comment>参与限制表的主键</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -967,67 +1019,78 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="231" name="totalparticipants">
+    <column id="250" parent="232" name="totalparticipants">
       <Position>2</Position>
       <Comment>总参与次数</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="231" name="dayparticipation">
+    <column id="251" parent="232" name="dayparticipation">
       <Position>3</Position>
       <Comment>日参与次数</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="231" name="totalwinningprize">
+    <column id="252" parent="232" name="totalwinningprize">
       <Position>4</Position>
       <Comment>总中奖次数</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="231" name="daywinningprize">
+    <column id="253" parent="232" name="daywinningprize">
       <Position>5</Position>
       <Comment>日中奖次数</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="246" parent="231" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="247" parent="232" name="id">
-      <Position>1</Position>
-      <Comment>参与提示表的主键</Comment>
-      <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
+    <column id="254" parent="232" name="linkurls">
+      <Position>6</Position>
+      <Comment>优惠券的链接设置</Comment>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="232" name="noprize">
-      <Position>2</Position>
+    <column id="255" parent="232" name="noprize">
+      <Position>7</Position>
       <Comment>未中奖的提示</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="232" name="exceeddaily">
-      <Position>3</Position>
+    <column id="256" parent="232" name="exceeddaily">
+      <Position>8</Position>
       <Comment>超出每日限制的提示</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="232" name="exceedtotal">
-      <Position>4</Position>
+    <column id="257" parent="232" name="exceedtotal">
+      <Position>9</Position>
       <Comment>超出总参与次数的提示</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="251" parent="232" name="PRIMARY">
+    <column id="258" parent="232" name="longitude">
+      <Position>10</Position>
+      <Comment>电子围栏的经度</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="259" parent="232" name="latitude">
+      <Position>11</Position>
+      <Comment>电子围栏的纬度</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="260" parent="232" name="range">
+      <Position>12</Position>
+      <Comment>电子围栏的范围</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="261" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="252" parent="233" name="id">
+    <column id="262" parent="233" name="id">
       <Position>1</Position>
       <Comment>奖品表的主键</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1035,42 +1098,109 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="233" name="prizename">
+    <column id="263" parent="233" name="prizename">
       <Position>2</Position>
       <Comment>奖品名称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="233" name="stock">
+    <column id="264" parent="233" name="stock">
       <Position>3</Position>
       <Comment>库存</Comment>
       <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="233" name="beginvalidityperiod">
+    <column id="265" parent="233" name="beginvalidityperiod">
       <Position>4</Position>
       <Comment>奖品有效期开始时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="256" parent="233" name="endvalidityperiod">
+    <column id="266" parent="233" name="endvalidityperiod">
       <Position>5</Position>
       <Comment>奖品有效期结束时间</Comment>
-      <DataType>datetime|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="257" parent="233" name="pictureurl">
+    <column id="267" parent="233" name="pictureurl">
       <Position>6</Position>
       <Comment>奖品图片的url</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="258" parent="233" name="PRIMARY">
+    <column id="268" parent="233" name="odds">
+      <Position>7</Position>
+      <Comment>中奖概率</Comment>
+      <DataType>float|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="269" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="259" parent="234" name="id">
+    <column id="270" parent="234" name="id">
+      <Position>1</Position>
+      <Comment>中奖纪录的主键</Comment>
+      <DataType>bigint(20) unsigned|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="271" parent="234" name="prizeid">
+      <Position>2</Position>
+      <Comment>奖品id</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="272" parent="234" name="userid">
+      <Position>3</Position>
+      <Comment>中奖人的id</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="273" parent="234" name="status">
+      <Position>4</Position>
+      <Comment>0为未领取，1为以领取</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="274" parent="234" name="type">
+      <Position>5</Position>
+      <Comment>奖品的类型</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="275" parent="234" name="goodscode">
+      <Position>6</Position>
+      <Comment>二维码和提货码</Comment>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="276" parent="234" name="isdel">
+      <Position>7</Position>
+      <Comment>0为删除，1为正常</Comment>
+      <DataType>tinyint(4)|0s</DataType>
+      <DefaultExpression>1</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="277" parent="234" name="createtime">
+      <Position>8</Position>
+      <Comment>创建纪录的时间</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="278" parent="234" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="279" parent="235" name="id">
       <Position>1</Position>
       <Comment>用户的唯一标识</Comment>
       <DataType>bigint(20)|0s</DataType>
@@ -1078,37 +1208,44 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="234" name="subscribe">
+    <column id="280" parent="235" name="subscribe">
       <Position>2</Position>
       <Comment>是否订阅公众号，0为未关注</Comment>
       <DataType>tinyint(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="234" name="openid">
+    <column id="281" parent="235" name="openid">
       <Position>3</Position>
       <Comment>用户的标识</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="234" name="nickname">
+    <column id="282" parent="235" name="nickname">
       <Position>4</Position>
       <Comment>用户的昵称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="234" name="sex">
+    <column id="283" parent="235" name="sex">
       <Position>5</Position>
       <Comment>性别，1为男，2为女，0为未知</Comment>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="234" name="headimgurl">
+    <column id="284" parent="235" name="headimgurl">
       <Position>6</Position>
+      <Comment>用户头像的地址</Comment>
       <DataType>varchar(255)|0s</DataType>
-      <DefaultExpression>&apos;用户头像的地址&apos;</DefaultExpression>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="265" parent="234" name="PRIMARY">
+    <column id="285" parent="235" name="createtime">
+      <Position>7</Position>
+      <Comment>创建纪录的时间</Comment>
+      <DataType>bigint(20)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="286" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

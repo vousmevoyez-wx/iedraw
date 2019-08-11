@@ -8,10 +8,10 @@ spring:
   cloud:
     config:
       server:
-        #          git: 可以在github上面拉取配置
-        #            uri: 这里是github的url
-        #            username: github的username
-        #            password: github的password
+#                  git: 在github上面拉取配置
+#                    uri: https://github.com/vousmevoyez-wx/iedraw-config.git
+#                    username: vousmevoyez-wx
+#                    password: wxizxj0830
         native: #从本地拉取配置
           search-locations: file:D:/GitProject/project/iedraw-config
 eureka:

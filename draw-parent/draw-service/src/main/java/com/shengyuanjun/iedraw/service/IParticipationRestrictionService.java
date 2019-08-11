@@ -13,4 +13,14 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface IParticipationRestrictionService extends IService<ParticipationRestriction> {
 
+    /**
+     * 查询优惠券的链接
+     * @return
+     */
+    String selectlinkurls();
+
+
+
+    public ParticipationRestriction selectParticipationRestrictionById(Long id);
+
 }

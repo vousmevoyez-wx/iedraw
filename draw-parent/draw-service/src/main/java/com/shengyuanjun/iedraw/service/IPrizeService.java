@@ -2,6 +2,10 @@ package com.shengyuanjun.iedraw.service;
 
 import com.shengyuanjun.iedraw.domain.Prize;
 import com.baomidou.mybatisplus.service.IService;
+import com.shengyuanjun.iedraw.query.PrizeQuery;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +16,18 @@ import com.baomidou.mybatisplus.service.IService;
  * @since 2019-08-06
  */
 public interface IPrizeService extends IService<Prize> {
+
+    /**
+     *  查询H5页面中的奖品
+     * @return
+     */
+    List<Prize> selectPrize();
+
+    Prize selectPrizeById(Long id);
+
+    List<Prize> getCouponsByQuery(PrizeQuery query);
+
+    ArrayList<Prize> selectAllPrize();
+
 
 }

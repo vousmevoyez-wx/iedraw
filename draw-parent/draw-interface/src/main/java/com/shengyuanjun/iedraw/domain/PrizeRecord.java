@@ -53,6 +53,30 @@ public class PrizeRecord extends Model<PrizeRecord> {
      */
     private Long createtime;
 
+    private  Customize customize;
+
+    private Prize prize;
+
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Customize getCustomize() {
+        return customize;
+    }
+
+    public void setCustomize(Customize customize) {
+        this.customize = customize;
+    }
+
+    public Prize getPrize() {
+        return prize;
+    }
+
+    public void setPrize(Prize prize) {
+        this.prize = prize;
+    }
 
     public Long getId() {
         return id;
@@ -126,14 +150,16 @@ public class PrizeRecord extends Model<PrizeRecord> {
     @Override
     public String toString() {
         return "PrizeRecord{" +
-        ", id=" + id +
-        ", prizeid=" + prizeid +
-        ", userid=" + userid +
-        ", status=" + status +
-        ", type=" + type +
-        ", goodscode=" + goodscode +
-        ", isdel=" + isdel +
-        ", createtime=" + createtime +
-        "}";
+                "id=" + id +
+                ", prizeid=" + prizeid +
+                ", userid=" + userid +
+                ", status=" + status +
+                ", type=" + type +
+                ", goodscode='" + goodscode + '\'' +
+                ", isdel=" + isdel +
+                ", createtime=" + createtime +
+                ", customize=" + customize +
+                ", prize=" + prize +
+                '}';
     }
 }
