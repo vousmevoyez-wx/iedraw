@@ -5,7 +5,7 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- * 资源映射路径
+ * 资源映射路径,主要是配置二维码文件保存路径
  */
 @Configuration
 public class MyWebAppConfigurer implements WebMvcConfigurer {

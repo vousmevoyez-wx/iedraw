@@ -259,18 +259,18 @@ public class PGController {
 
         System.out.println("定位确认");
 
-        String longitude0 =  request.getParameter("longitude");
-        String latitude0 =  request.getParameter("latitude");
+        //String longitude0 =  request.getParameter("longitude");
+        //String latitude0 =  request.getParameter("latitude");
 
         //判断范围
         ParticipationRestriction par = participationRestrictionServiceImpl.selectParticipationRestrictionById(Long.parseLong("3"));
         String range = par.getRange();//系统范围
-        System.out.println("td = " + longitude0);
+        /*System.out.println("td = " + longitude0);
         System.out.println("ti = " + latitude0);
         Double la = Double.parseDouble(par.getLatitude()) - Double.parseDouble(latitude0);
-        Double gi = Double.parseDouble(par.getLongitude()) - Double.parseDouble(longitude0);
+        Double gi = Double.parseDouble(par.getLongitude()) - Double.parseDouble(longitude0);*/
         //判断是否在活动的地图范围内
-        if ((la * la + gi * gi) < Double.parseDouble(par.getRange()) * Double.parseDouble(par.getRange())) {
+       // if ((la * la + gi * gi) < Double.parseDouble(par.getRange()) * Double.parseDouble(par.getRange())) {
             logger.info("判断的值在范围以内");
             HttpSession session = request.getSession();
             //zaisession中获取openid来查询用户信息
@@ -290,7 +290,7 @@ public class PGController {
             //查询本人抽奖次数
             List<PrizeRecord> pzr = prizeRecordServiceImpl.selectWinTimesDaily();
             List<PrizeRecord> list = new Vector<PrizeRecord>();
-
+            System.out.println("times = " + Integer.parseInt(Alltimes));
             //如果总次数没有超，则判断当天总次数
             if (pzr.size() < Integer.parseInt(Alltimes)) {
                 //获取现在时间
@@ -356,12 +356,12 @@ public class PGController {
                     类型： 1表示私人定制
                     类型： 2表示奖品
                  */
-                if (ppp.getPrizename().contains("优惠券")) {
+                if (ppp.getType()==0) {
                     System.out.println("这优惠券");
                     pz.setGoodscode("有赞");
                     pz.setType(0);
                     prizeRecordServiceImpl.savePrizeRecord(pz);
-                } else if (ppp.getPrizename().contains("私人")) {
+                } else if (ppp.getType()==1) {
                     System.out.println("这私人定制");
                     String number = NameUtil.genNumberStr(5);
                     PrizeRecord p1 = new PrizeRecord();
@@ -391,7 +391,7 @@ public class PGController {
                         System.out.println("again。。。");
                         p1.setGoodscode(number);
                     }
-                } else if (ppp.getPrizename().contains("奖品")) {
+                } else if (ppp.getType()==2) {
                     System.out.println("这是个奖品");
                     pz.setType(2);
                     prizeRecordServiceImpl.savePrizeRecord(pz);
@@ -416,17 +416,17 @@ public class PGController {
                 logger.info("用户查询结果为 " + user);
                 map.put("winner", ppp);
                 return map;
-            } else {
+            }else{
                 //超出总次数
                 map.put("allup", "true");
                 return map;
             }
-        } else {
+       /* } else {
             System.out.println("超出活动区域");
             //超出活动区域
             map.put("area", "out");
             return map;
-        }
+        }*/
     }
 
     /**

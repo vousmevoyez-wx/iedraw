@@ -11,11 +11,12 @@
         <result column="endvalidityperiod" property="endvalidityperiod" />
         <result column="pictureurl" property="pictureurl" />
         <result column="odds" property="odds" />
+        <result column="type" property="type" />
     </resultMap>
 
 
     <sql id="Base_Column_List">
-    id, prizename, stock, beginvalidityperiod, endvalidityperiod, pictureurl, odds
+    id, prizename, stock, beginvalidityperiod, endvalidityperiod, pictureurl, odds , `type`
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select

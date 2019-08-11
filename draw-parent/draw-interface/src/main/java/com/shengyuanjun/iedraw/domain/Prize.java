@@ -49,6 +49,33 @@ public class Prize extends Model<Prize> {
      */
     private Float odds;
 
+    private int type;
+
+    @Override
+    public String toString() {
+        return "Prize{" +
+                "id=" + id +
+                ", prizename='" + prizename + '\'' +
+                ", stock=" + stock +
+                ", beginvalidityperiod=" + beginvalidityperiod +
+                ", endvalidityperiod=" + endvalidityperiod +
+                ", pictureurl='" + pictureurl + '\'' +
+                ", odds=" + odds +
+                ", type=" + type +
+                '}';
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
 
     public Long getId() {
         return id;
@@ -111,16 +138,4 @@ public class Prize extends Model<Prize> {
         return this.id;
     }
 
-    @Override
-    public String toString() {
-        return "Prize{" +
-        ", id=" + id +
-        ", prizename=" + prizename +
-        ", stock=" + stock +
-        ", beginvalidityperiod=" + beginvalidityperiod +
-        ", endvalidityperiod=" + endvalidityperiod +
-        ", pictureurl=" + pictureurl +
-        ", odds=" + odds +
-        "}";
-    }
 }
