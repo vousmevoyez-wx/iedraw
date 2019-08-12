@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shengyuanjun.iedraw.mapper.PrizeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.shengyuanjun.iedraw.domain.Prize">
+        <id column="id" property="id" />
+        <result column="prizename" property="prizename" />
+        <result column="stock" property="stock" />
+        <result column="beginvalidityperiod" property="beginvalidityperiod" />
+        <result column="endvalidityperiod" property="endvalidityperiod" />
+        <result column="pictureurl" property="pictureurl" />
+        <result column="odds" property="odds" />
+        <result column="type" property="type" />
+    </resultMap>
+
+
+    <sql id="Base_Column_List">
+    id, prizename, stock, beginvalidityperiod, endvalidityperiod, pictureurl, odds , `type`
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_prize
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="selectCouponsByQuery" parameterType="com.shengyuanjun.iedraw.query.PrizeQuery" resultMap="BaseResultMap">
+     select p.*,r.totalparticipants, r.dayparticipation, r.totalwinningprize, r.daywinningprize,
+      r.linkurls,r.noprize, r.exceeddaily, r.exceedtotal, r.longitude, r.latitude, r.range from t_prize
+      p left join t_participation_restriction r on r.prize_id=p.id
+  </select>
+
+
+    <select id="selectAll"  resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_prize
+
+    </select>
+
+</mapper>

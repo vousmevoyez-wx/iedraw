@@ -1,0 +1,4 @@
+com\shengyuanjun\iedraw\CommonServiceApplication.class
+com\shengyuanjun\iedraw\util\FastDfsApiOpr.class
+com\shengyuanjun\iedraw\config\Swagger2Config.class
+com\shengyuanjun\iedraw\controller\FastDfsController.class

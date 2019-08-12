@@ -1,0 +1,23 @@
+#注册到eurak服务端中
+eureka:
+  client:
+    service-url:
+      defaultZone: http://jxb-zbh.jxbscbd.com:8761/eureka
+  instance:
+    instance-id: draw-8002
+    prefer-ip-address: true
+#从配置中心获取配置
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: application-draw #github上面名称
+      profile: ${spring.profiles.active} #环境 java -jar -D xxx jar
+      label: '' #分支
+      discovery:
+        enabled: true #从eureka上面找配置服务
+        service-id: iedraw-config
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml

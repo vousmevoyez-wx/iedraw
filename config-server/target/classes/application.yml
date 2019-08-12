@@ -1,0 +1,24 @@
+server:
+  port: 1299
+spring:
+  application:
+    name: iedraw-config
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+#        git: 在github上面拉取配置
+#          uri: https://github.com/vousmevoyez-wx/iedraw-config.git
+#          username: vousmevoyez-wx
+#          password: wxizxj0830
+        native: #从本地拉取配置
+#          search-locations: file:/home/jxb/iedraw-config
+          search-locations: file:D:\GitProject\project\iedraw-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://jxb-zbh.jxbscbd.com:8761/eureka
+  instance:
+    instance-id: config-server
+    prefer-ip-address: true

@@ -1,0 +1,30 @@
+#注册到eurak服务端中
+eureka:
+  client:
+    service-url:
+      defaultZone: http://jxb-zbh.jxbscbd.com:8761/eureka
+  instance:
+    instance-id: common-8010
+    prefer-ip-address: true
+#从配置中心获取配置
+spring:
+  profiles:
+    active: dev
+  cloud:
+    config:
+      name: application-common #github上面名称
+      profile: ${spring.profiles.active} #环境 java -jar -D xxx jar
+      label: '' #分支
+      discovery:
+        enabled: true #从eureka上面找配置服务
+        service-id: iedraw-config
+  #上传的文件大小限制
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+server:
+  #tomcat:
+  #max-http-post-size: -1
+  max-http-header-size: 4048576
+
