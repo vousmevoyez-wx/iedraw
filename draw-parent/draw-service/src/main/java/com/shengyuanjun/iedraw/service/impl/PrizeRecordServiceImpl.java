@@ -75,4 +75,14 @@ public class PrizeRecordServiceImpl extends ServiceImpl<PrizeRecordMapper, Prize
     public int updateStatus(PrizeRecord pr) {
         return prizeRecordMapper.updateByPrimaryKeySelective(pr);
     }
+
+
+    //查看仅仅记录
+
+    //查询抽奖记录情况
+    @Override
+    public List<PrizeRecord> selectAll() {
+        return prizeRecordMapper.showAll();
+    }
+
 }

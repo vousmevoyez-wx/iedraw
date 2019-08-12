@@ -43,4 +43,5 @@ public interface PrizeRecordMapper extends BaseMapper<PrizeRecord> {
     //中奖表和prize表连表查询
     List<PrizeRecord> showpzr(Long id);
 
+    List<PrizeRecord> showAll();
 }

@@ -20,8 +20,9 @@ public class GlobalCorsConfig{
         //1.添加CORS配置信息
         CorsConfiguration config = new CorsConfiguration();
         //1) 允许的域,不要写*，否则cookie就无法使用了
-        config.addAllowedOrigin("http://jxb-zbh.jxbscbd.com:6001");
-        config.addAllowedOrigin("http://jxb-zbh.jxbscbd.com/services/draw/signature/signa");
+        config.addAllowedOrigin("http://localhost:6001");
+//        config.addAllowedOrigin("http://jxb-zbh.jxbscbd.com:6001");
+//        config.addAllowedOrigin("http://jxb-zbh.jxbscbd.com/services/draw/signature/signa");
         //2) 是否发送Cookie信息
         config.setAllowCredentials(true);
         //3) 允许的请求方式

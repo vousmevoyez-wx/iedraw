@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b607cb-c7f5-4dc6-8d16-05e05215cb51" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/basic-code/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plat-parent/plat-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-interface/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plat-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,7 +76,30 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java">
+        <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -91,81 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8844">
-              <caret line="425" column="17" selection-start-line="425" selection-start-column="17" selection-end-line="425" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-              <folding>
-                <element signature="e#2015#2016#0" expanded="true" />
-                <element signature="e#2087#2088#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java">
+        <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="196" column="14" lean-forward="true" selection-start-line="196" selection-start-column="14" selection-end-line="196" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="242">
+              <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -205,8 +151,6 @@
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/JsapiticketServiceImpl.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/JsapiticketMapper.xml" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/SHA1Util.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GetSignatureController.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/GetSignature.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/AccessTokenScheduler.java" />
@@ -218,7 +162,6 @@
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/CheckUtil.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/SendMsgController.java" />
-        <option value="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java" />
         <option value="$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/bootstrap.yml" />
@@ -239,14 +182,17 @@
         <option value="$PROJECT_DIR$/draw-common/common-interface/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/pom.xml" />
-        <option value="$PROJECT_DIR$/config-server/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeService.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" />
+        <option value="$PROJECT_DIR$/config-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java" />
       </list>
     </option>
   </component>
@@ -292,6 +238,51 @@
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zuulgateway" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zuulgateway" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -318,21 +309,21 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\controller" />
+      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain" />
+      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\resources" />
+      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\util" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shengyuanjun.iedraw.service.impl" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test" />
       <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\resources\static" />
       <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test\gq\utils" />
       <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test\gq" />
       <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\controller" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.shengyuanjun.iedraw.service.impl" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\controller" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\resources" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -485,7 +476,7 @@
       <workItem from="1565140219633" duration="19756000" />
       <workItem from="1565226861918" duration="124663000" />
       <workItem from="1565486453238" duration="50655000" />
-      <workItem from="1565571853426" duration="704000" />
+      <workItem from="1565571853426" duration="1874000" />
     </task>
     <task id="LOCAL-00001" summary="修改LoginController">
       <created>1564461149135</created>
@@ -599,11 +590,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565529732327</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="修改IP地址">
+      <created>1565572977559</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1565572977559</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="376209000" />
+    <option name="totallyTimeSpent" value="377379000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,6 +614,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -639,7 +638,7 @@
       <window_info anchor="bottom" id="Debug" order="11" weight="0.31019524" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="14" weight="0.42299348" />
+      <window_info anchor="bottom" id="Run" order="14" weight="0.40238613" />
       <window_info anchor="bottom" id="TODO" order="15" weight="0.329718" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
       <window_info anchor="right" id="Palette" order="1" />
@@ -758,19 +757,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/resources/fdfs_client.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="34" lean-forward="true" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -802,13 +788,6 @@
     <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -820,13 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="22" column="67" lean-forward="true" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -872,13 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -974,32 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plat-parent/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -1028,21 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java" />
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8844">
@@ -1053,28 +977,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-          <folding>
-            <element signature="e#2015#2016#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
@@ -1101,8 +1007,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="196" column="14" lean-forward="true" selection-start-line="196" selection-start-column="14" selection-end-line="196" selection-end-column="14" />
+        <state relative-caret-position="521">
+          <caret line="193" column="42" lean-forward="true" selection-start-line="193" selection-start-column="42" selection-end-line="193" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="48" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+          <folding>
+            <element signature="e#2015#2016#0" expanded="true" />
+            <element signature="e#2087#2088#0" expanded="true" />
+            <element signature="e#2175#2176#0" expanded="true" />
+            <element signature="e#2225#2226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="223" column="11" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>

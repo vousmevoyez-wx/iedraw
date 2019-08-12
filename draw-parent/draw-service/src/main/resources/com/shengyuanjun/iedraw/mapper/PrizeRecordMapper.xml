@@ -216,4 +216,10 @@ WHERE
 	pr.prizeid = P.id
 </select>
 
+    <select id="showAll"  resultMap="BaseResultMap">
+    SELECT
+	    id,status,createtime
+    FROM
+	    t_prize_record
+  </select>
 </mapper>
