@@ -64,4 +64,9 @@ public class PrizeServiceImpl extends ServiceImpl<PrizeMapper, Prize> implements
         return prizeMapper.selectAll();
     }
 
+    @Override
+    public int updateStockByPrizeWinner(Prize p) {
+        return prizeMapper.updateByPrimaryKey(p);
+    }
+
 }

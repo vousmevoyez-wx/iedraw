@@ -196,7 +196,8 @@ public class PGController {
                         System.out.println("user = "+backuser);
                         //校验是否已经录入资料结果
                         //如果数据库没有该用户信息，则执行保存
-                        if (backuser != null) {
+                        if (backuser == null) {
+                            logger.info("没有查到该用户信息，执行保存操作...");
                             userinfoServiceImpl.saveUserInfomsg(user);
                         }
                         logger.info("该用户已关注公众号，信息校验成功。。。");
@@ -274,8 +275,7 @@ public class PGController {
             logger.info("判断的值在范围以内");
             HttpSession session = request.getSession();
             //zaisession中获取openid来查询用户信息
-           // String openid = (String) session.getAttribute("openid");
-            String openid = "asd4564";
+            String openid = (String) session.getAttribute("openid");
             System.out.println("收到openid = " + openid);
             UserInfo user = userinfoServiceImpl.selectThisUser("asd4564");
             System.out.println("par = " + par);
@@ -321,13 +321,28 @@ public class PGController {
                 Iterator<Prize> iter = prizes.iterator();
 
                 ArrayList<Prize> AP = new ArrayList<>();
-                while (iter.hasNext()) {
-                    Prize p = iter.next();
+                float obbchange = 0;
+//抽奖前库存判断
+                while(iter.hasNext()){
+                    Prize p= iter.next();
                     p.setOdds((float) p.getOdds());
-                    if (p.getStock() > 0) {
+                    if(p.getStock()>0){
                         AP.add(p);
+                    }else{
+                        obbchange = obbchange + p.getOdds();
                     }
                 }
+                if(obbchange > 0){
+                    Iterator<Prize> ite = AP.iterator();
+                    while(it.hasNext()){
+                        Prize p= ite.next();
+                        if(p.getType()==0){
+                            p.setOdds(p.getOdds()+obbchange);
+                        }
+                    }
+                }
+
+
 
                 System.out.println("抽奖开始");
                 //根据参数进入抽奖工具类进行该路计算
@@ -343,8 +358,7 @@ public class PGController {
                 pz.setUserid(user.getId());
                 pz.setPrizeid(prizes.get(selected).getId());
 
-                String nowtime = Timeutil.getLongTime();
-                Long time = Long.parseLong(nowtime);
+                Long time = new Date().getTime();
 
                 pz.setCreatetime(time);
                 pz.setStatus(0);
@@ -410,6 +424,11 @@ public class PGController {
                     p.setId(pzid);
                     prizeRecordServiceImpl.savePrizeRecordQRCode(p);
                 }
+                //抽奖后奖品数量减1
+                ppp.setStock(ppp.getStock()-1);
+                prizeServiceImpl.updateStockByPrizeWinner(ppp);
+
+                System.out.println("prize = "+ppp);
 
                 System.out.println("prize = " + ppp);
 

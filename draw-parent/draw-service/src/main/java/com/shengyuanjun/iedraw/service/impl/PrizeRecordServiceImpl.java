@@ -70,4 +70,9 @@ public class PrizeRecordServiceImpl extends ServiceImpl<PrizeRecordMapper, Prize
     public List<PrizeRecord> showpzr(Long id) {
         return prizeRecordMapper.showpzr(id);
     }
+
+    @Override
+    public int updateStatus(PrizeRecord pr) {
+        return prizeRecordMapper.updateByPrimaryKeySelective(pr);
+    }
 }

@@ -164,9 +164,13 @@ public class CodeController {
             //status为0说明未领取
             value = "{\"able\":\"" + true + "\",\"username\":\""+ user.getNickname() +"\",\"userHeadimgurl\":\"" + user.getHeadimgurl() + "\",\"prizename\":\""
                     + pz.getPrizename() + "\",\"prizepictureurl\":\"" + pz.getPictureurl() + "\"}";
+
         }else if("1".equals(status)){
             //status为1说明已领取
             value = "{\"able\":\"" + false + "\"}";
+        }else if("2".equals(status)){
+            //status为2说明已过期
+            value = "{\"able\":\"out\"}";
         }
         return value;
     }
@@ -182,9 +186,9 @@ public class CodeController {
     @RequestMapping("/overQcode")
     public String backCodeValue(HttpServletRequest request){
         Long id = Long.parseLong(request.getParameter("id"));
-        String statu = request.getParameter("status");
+        String backstatu = request.getParameter("backstatu");
         //如果返回扫码成功信号，则进行相应处理
-        if(statu.equals("success")){
+        if(backstatu.equals("success")){
             PrizeRecord pzr = new PrizeRecord();
             pzr.setId(id);
             //扫码成功过后，修改二维码扫码状态，记录已被扫码领取的状态

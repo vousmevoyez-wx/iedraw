@@ -30,4 +30,5 @@ public interface IPrizeService extends IService<Prize> {
     ArrayList<Prize> selectAllPrize();
 
 
+    int updateStockByPrizeWinner(Prize p);
 }

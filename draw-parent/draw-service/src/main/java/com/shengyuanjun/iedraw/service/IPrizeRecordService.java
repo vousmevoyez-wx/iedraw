@@ -42,4 +42,5 @@ public interface IPrizeRecordService extends IService<PrizeRecord> {
 
     public List<PrizeRecord> showpzr(Long id);
 
+    int updateStatus(PrizeRecord pr);
 }
