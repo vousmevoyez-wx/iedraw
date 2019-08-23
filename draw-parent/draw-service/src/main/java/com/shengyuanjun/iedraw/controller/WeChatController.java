@@ -3,10 +3,8 @@ package com.shengyuanjun.iedraw.controller;
 
 import com.shengyuanjun.iedraw.service.TokenService;
 import com.shengyuanjun.iedraw.test.gzhfwq.utils.CheckUtil;
-import com.shengyuanjun.iedraw.test.gzhfwq.utils.HttpGetUtil;
 import com.shengyuanjun.iedraw.test.gzhfwq.utils.XMLTOMAP;
 import com.shengyuanjun.iedraw.test.sendtextmsgtest2.MessageUtil;
-import org.dom4j.DocumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.PropertySource;
