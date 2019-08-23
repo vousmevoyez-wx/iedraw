@@ -15,6 +15,8 @@
         <module>config-server</module>
         <module>code-generator</module>
         <module>draw-common</module>
+        <module>eureka-server</module>
+        <module>zuul-gateway</module>
     </modules>
 
     <!--项目的属性-->

@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface ActivityTimeMapper extends BaseMapper<ActivityTime> {
 
+    void updateActivityTime(ActivityTime activityTime);
 }

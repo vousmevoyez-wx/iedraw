@@ -44,4 +44,8 @@ public interface PrizeRecordMapper extends BaseMapper<PrizeRecord> {
     List<PrizeRecord> showpzr(Long id);
 
     List<PrizeRecord> showAll();
+
+    PrizeRecord selectByGoodsCode(PrizeRecord cus);
+
+    int  updateByGoodsCode(PrizeRecord pz);
 }

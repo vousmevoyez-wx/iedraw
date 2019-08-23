@@ -48,7 +48,8 @@ public class UserInfoServiceImpl implements UserInfoService {
      *@Author: gq544
      *@date: 2019/8/5 18:27
      */
-    public String getOpenid(String code){
+    public Map getOpenid(String code){
+        Map map = new HashMap();
         Map params = new HashMap();
         params.put("appid", appid);
         params.put("secret", appsecret);
@@ -56,14 +57,27 @@ public class UserInfoServiceImpl implements UserInfoService {
         params.put("grant_type", "authorization_code");
         String result = HttpGetUtil.httpRequestToString(
                 "https://api.weixin.qq.com/sns/oauth2/access_token",params);
+        System.out.println("result000 = " + result);
         JSONObject jsonObject = JSONObject.fromObject(result);
-        log.info("getOpenid方法正在获取openid。。。。。  jsonObject = " +  jsonObject);
-        if(jsonObject.get("openid").toString()!=null){
+        log.info("UserInfoServiceImpl   getOpenid  jsonObject = " +  jsonObject);
+        /*if(jsonObject.get("openid").toString()!=null){
             String openid = jsonObject.get("openid").toString();
             return openid;
         }else{
             return "fail";
+        }*/
+        if(jsonObject.toString().contains("openid")){
+            String openid = jsonObject.get("openid").toString();
+            String accesstoken = jsonObject.get("access_token").toString();
+            map.put("openid",openid);
+            map.put("accesstoken",accesstoken);
+            map.put("statues",1);
+            map.put("value",result);
+        }else{
+            map.put("statues",-1);
+            map.put("value",result);
         }
+        return map;
     }
 
     /**
@@ -132,6 +146,8 @@ public class UserInfoServiceImpl implements UserInfoService {
         }
         log.info("认证信息获取完成。。");
         System.out.println(demoJson);
+
+
         return demoJson;
     }
 
@@ -153,7 +169,14 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Override
     public UserInfo selectUserById(Long id) {
+
         return userinfoMapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int updateById(UserInfo backuser) {
+        return userinfoMapper.updateByPrimaryKeySelective(backuser);
+    }
+
 
 }

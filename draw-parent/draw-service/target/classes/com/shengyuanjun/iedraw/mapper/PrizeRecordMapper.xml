@@ -12,14 +12,6 @@
         <result column="goodscode" property="goodscode" />
         <result column="isdel" property="isdel" />
         <result column="createtime" property="createtime" />
-        <association property="customize" javaType="com.shengyuanjun.iedraw.domain.Customize">
-            <id column="id" jdbcType="BIGINT" property="id" />
-            <result column="customizetime" jdbcType="BIGINT" property="customizetime" />
-            <result column="goodscode" jdbcType="VARCHAR" property="goodscode" />
-            <result column="printchart" jdbcType="VARCHAR" property="printchart" />
-            <result column="printstatus" jdbcType="TINYINT" property="printstatus" />
-            <result column="createtime" jdbcType="BIGINT" property="createtime" />
-        </association>
         <association property="prize" javaType="com.shengyuanjun.iedraw.domain.Prize">
             <result column="prizename" jdbcType="VARCHAR" property="prizename" />
             <result column="stock" jdbcType="BIGINT" property="stock" />
@@ -37,7 +29,7 @@
         HAVING COUNT(*) > 1
     </select>
     <sql id="Base_Column_List">
-    id, prizeid, userid, status, type, goodscode, isdel, createtime
+    id, prizeid, userid, status, `type`, goodscode, isdel, createtime
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
@@ -178,19 +170,19 @@ SELECT
 	pr.goodscode,
 	p.pictureurl,
 	p.prizename,
-	from_unixtime(
-		p.beginvalidityperiod
-	) AS beginvalidityperiod,
-	FROM_UNIXTIME(
-		p.endvalidityperiod
-	) AS endvalidityperiod,
-	pr.createtime
+	p.beginvalidityperiod,
+	p.endvalidityperiod,
+	pr.prizeid
+
 FROM
 	t_prize_record AS pr
 INNER JOIN t_prize AS p ON pr.prizeid = p.id
 WHERE
 	pr.isdel = 1
 AND pr.userid = #{userid,jdbcType=BIGINT}
+order by
+    pr.id DESC
+
 </select>
 
     <select id="showpzr" parameterType="java.lang.Long" resultMap="BaseResultMap">
@@ -202,12 +194,8 @@ SELECT
 	pr.goodscode,
 	p.pictureurl,
 	p.prizename,
-	from_unixtime(
-		p.beginvalidityperiod
-	) AS beginvalidityperiod,
-	FROM_UNIXTIME(
-		p.endvalidityperiod
-	) AS endvalidityperiod,
+    p.beginvalidityperiod,
+    p.endvalidityperiod,
 	pr.createtime
 FROM
 	t_prize_record AS pr
@@ -218,8 +206,42 @@ WHERE
 
     <select id="showAll"  resultMap="BaseResultMap">
     SELECT
-	    id,status,createtime
+	    id,status,createtime,prizeid
     FROM
 	    t_prize_record
   </select>
+
+
+    <select id="selectByGoodsCode" resultMap="BaseResultMap" parameterType="com.shengyuanjun.iedraw.domain.PrizeRecord">
+        select
+        <include refid="Base_Column_List"/>
+        from t_prize_record
+        where goodscode = #{goodscode,jdbcType=VARCHAR}
+    </select>
+
+
+    <update id="updateByGoodsCode" parameterType="com.shengyuanjun.iedraw.domain.PrizeRecord">
+        update t_prize_record
+        <set>
+            <if test="prizeid != null">
+                prizeid = #{prizeid,jdbcType=BIGINT},
+            </if>
+            <if test="userid != null">
+                userid = #{userid,jdbcType=BIGINT},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=TINYINT},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=TINYINT},
+            </if>
+            <if test="isdel != null">
+                isdel = #{isdel,jdbcType=TINYINT},
+            </if>
+            <if test="createtime != null">
+                createtime = #{createtime,jdbcType=BIGINT},
+            </if>
+        </set>
+        where goodscode = #{goodscode,jdbcType=VARCHAR}
+    </update>
 </mapper>

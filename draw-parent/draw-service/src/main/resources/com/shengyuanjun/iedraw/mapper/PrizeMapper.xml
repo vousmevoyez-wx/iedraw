@@ -39,4 +39,44 @@
 
     </select>
 
+
+    <update id="updateByPrimaryKey" parameterType="com.shengyuanjun.iedraw.domain.Prize">
+    update t_prize
+    set prizename = #{prizename,jdbcType=VARCHAR},
+      stock = #{stock,jdbcType=BIGINT},
+      beginvalidityperiod = #{beginvalidityperiod,jdbcType=BIGINT},
+      endvalidityperiod = #{endvalidityperiod,jdbcType=BIGINT},
+      pictureurl = #{pictureurl,jdbcType=VARCHAR},
+      odds = #{odds,jdbcType=REAL},
+      type= #{type,jdbcType=INTEGER},
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+    <update id="updateByPrimaryKeySelective" parameterType= "com.shengyuanjun.iedraw.domain.Prize">
+        update t_prize
+        <set>
+            <if test="prizename != null">
+                prizename = #{prizename,jdbcType=VARCHAR},
+            </if>
+            <if test="stock != null">
+                stock = #{stock,jdbcType=BIGINT},
+            </if>
+            <if test="beginvalidityperiod != null">
+                beginvalidityperiod = #{beginvalidityperiod,jdbcType=BIGINT},
+            </if>
+            <if test="endvalidityperiod != null">
+                endvalidityperiod = #{endvalidityperiod,jdbcType=BIGINT},
+            </if>
+            <if test="pictureurl != null">
+                pictureurl = #{pictureurl,jdbcType=VARCHAR},
+            </if>
+            <if test="odds != null">
+                odds = #{odds,jdbcType=REAL},
+            </if>
+            <if test="type != null">
+                `type`=#{type,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
 </mapper>

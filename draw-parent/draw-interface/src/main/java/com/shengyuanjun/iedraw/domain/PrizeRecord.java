@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.io.Serializable;
 
 /**
@@ -27,6 +29,7 @@ public class PrizeRecord extends Model<PrizeRecord> {
     /**
      * 奖品id
      */
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private Long prizeid;
     /**
      * 中奖人的id
@@ -47,13 +50,14 @@ public class PrizeRecord extends Model<PrizeRecord> {
     /**
      * 0为删除，1为正常
      */
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private Integer isdel;
     /**
      * 创建纪录的时间
      */
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private Long createtime;
 
-    private  Customize customize;
 
     private Prize prize;
 
@@ -61,15 +65,6 @@ public class PrizeRecord extends Model<PrizeRecord> {
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
-
-    public Customize getCustomize() {
-        return customize;
-    }
-
-    public void setCustomize(Customize customize) {
-        this.customize = customize;
-    }
-
     public Prize getPrize() {
         return prize;
     }
@@ -158,7 +153,6 @@ public class PrizeRecord extends Model<PrizeRecord> {
                 ", goodscode='" + goodscode + '\'' +
                 ", isdel=" + isdel +
                 ", createtime=" + createtime +
-                ", customize=" + customize +
                 ", prize=" + prize +
                 '}';
     }

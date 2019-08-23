@@ -26,6 +26,10 @@ public class WX_UserUtil {
         log.error("获取用户是否订阅 errcode:{} errmsg:{}", resultJson.getInteger("errcode"), resultJson.getString("errmsg"));
         String errmsg = (String) resultJson.get("errmsg");
         System.out.println("结果为 ： "+resultJson);
+        if(resultJson.toString().contains("access_token is invalid or not latest hint")){
+            //检测到token过期的时候提醒更新token
+            return 2;
+        }
         if(errmsg==null){
             //用户是否订阅该公众号标识（0代表此用户没有关注该公众号 1表示关注了该公众号）。
             Integer subscribe = (Integer) resultJson.get("subscribe");

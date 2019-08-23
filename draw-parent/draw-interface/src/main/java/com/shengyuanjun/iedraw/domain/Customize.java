@@ -22,7 +22,6 @@ public class Customize extends Model<Customize> {
     /**
      * 私人订制的主键
      */
-    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
     /**
      * 定制时间
@@ -40,10 +39,6 @@ public class Customize extends Model<Customize> {
      * 打印状态，0为未打印，1为已打印，2为已失效，3为打印失败
      */
     private Integer printstatus;
-    /**
-     * 创建表纪录的时间
-     */
-    private Long createtime;
 
 
     public Long getId() {
@@ -86,13 +81,6 @@ public class Customize extends Model<Customize> {
         this.printstatus = printstatus;
     }
 
-    public Long getCreatetime() {
-        return createtime;
-    }
-
-    public void setCreatetime(Long createtime) {
-        this.createtime = createtime;
-    }
 
     @Override
     protected Serializable pkVal() {
@@ -107,7 +95,6 @@ public class Customize extends Model<Customize> {
         ", goodscode=" + goodscode +
         ", printchart=" + printchart +
         ", printstatus=" + printstatus +
-        ", createtime=" + createtime +
         "}";
     }
 }

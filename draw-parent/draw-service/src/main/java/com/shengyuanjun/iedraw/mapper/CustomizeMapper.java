@@ -33,4 +33,7 @@ public interface CustomizeMapper extends BaseMapper<Customize> {
 
     int updateByPrimaryKey(Customize record);
 
+    int updateByGoodsCode(Customize cum);
+
+    Customize selectByGoodsCode(Customize c);
 }

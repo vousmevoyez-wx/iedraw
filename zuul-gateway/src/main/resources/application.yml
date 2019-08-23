@@ -1,0 +1,49 @@
+zuul:
+  ignored-services: "*"
+  prefix: "/services"
+  routes: #路由的配置
+    user.serviceId: plat-parent
+    user.path: /plat/**
+    draw.serviceId: iedraw-parent
+    draw.path: /draw/**
+    common.serviceId: iedraw-common
+    common.path: /common/**
+  retryable: true
+  semaphore:
+    max-semaphores: 5000
+  ribbon-isolation-strategy: semaphore
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+    max-total-connections: 5000
+    max-per-route-connections: 5000
+#设置网关的超时时间
+ribbon:
+  ReadTimeout: 50000
+  SocketTimeout: 50000
+  ConnectTimeout: 50000
+  OkToRetryOnAllOpertions: false
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+feign:
+  hystrix:
+    enabled: true #开启熔断支持
+  client:
+    config:
+      remote-service:            #服务名，填写default为所有服务
+        connectTimeout: 5000    #与服务提供者连接超时的时间
+        readTimeout: 5000       #服务提供者响应的时间
+hystrix:
+  threadpool:
+    default:
+      coreSize: 400
+      maxQueueSize: 400
+      queueSizeRejectionThreshold: 400
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2000000000 #方法最终的执行时间

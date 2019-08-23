@@ -6,8 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
-@EnableEurekaClient //eureka客户端
-@EnableZuulProxy    //zuul
+@EnableZuulProxy    //zuul 先本地测试好
 public class ZuulGatewayApplication {
 
     public static void main(String[] args) {

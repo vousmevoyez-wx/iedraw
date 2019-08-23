@@ -40,11 +40,14 @@ public interface IPrizeRecordService extends IService<PrizeRecord> {
 
     public List<PrizeRecord> selectTwoTableByUserId(Long id);
 
-    public List<PrizeRecord> showpzr(Long id);
-
     int updateStatus(PrizeRecord pr);
 
 
     //查看仅仅记录
     public List<PrizeRecord> selectAll();
+
+    PrizeRecord selectByGoodsCode(PrizeRecord cus);
+
+
+    int updateByGoodsCode(PrizeRecord pz);
 }

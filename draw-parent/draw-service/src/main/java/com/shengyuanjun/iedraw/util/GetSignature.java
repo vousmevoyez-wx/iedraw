@@ -127,13 +127,13 @@ public class GetSignature {
      * @param url
      * @return
      */
-    public static Map<String,String> getSignature(String url,String accesstoken) {
+    public static Map<String,String> getSignature(String appid,String url,String accesstoken) {
 
         Map<String,String> map = new HashMap<>();
         String signature = "";
 
-        String appid = "wxc5ee705c32731501";//微信公众号的appid
-        String appsecret = "4593ba86fe6eca456860fa08b53bf7a7";//微信公众号的appsecret
+        //String appid = "wxaf662218893cdffa";//微信公众号的appid
+        //String appsecret = "9f0ab14aa8d9491a9e30453813a1ee6d";//微信公众号的appsecret
 
         //获取noncestr
         String noncestr = UUID.randomUUID().toString();
@@ -169,8 +169,8 @@ public class GetSignature {
         String signature = "";
 
 
-        String appid = "wxc5ee705c32731501";//微信公众号的appid
-        String appsecret = "4593ba86fe6eca456860fa08b53bf7a7";//微信公众号的appsecret
+       // String appid = "wxaf662218893cdffa";//微信公众号的appid
+        //String appsecret = "9f0ab14aa8d9491a9e30453813a1ee6d";//微信公众号的appsecret
 
         //获取noncestr
         String noncestr = UUID.randomUUID().toString();

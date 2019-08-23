@@ -4,12 +4,24 @@ feign:
   client:
     config:
       remote-service:            #服务名，填写default为所有服务
-        connectTimeout: 1000    #与服务提供者连接超时的时间
-        readTimeout: 1000       #服务提供者响应的时间
+        connectTimeout: 5000    #与服务提供者连接超时的时间
+        readTimeout: 5000       #服务提供者响应的时间
 hystrix:
+  threadpool:
+    default:
+      coreSize: 300
+      maxQueueSize: 300
+      queueSizeRejectionThreshold: 300
   command:
     default:
       execution:
+        timeout:
+          enabled: false
         isolation:
           thread:
-            timeoutInMilliseconds: 1000 #方法最终的执行时间
+            timeoutInMilliseconds: 2000000000 #方法最终的执行时间
+spring:
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true

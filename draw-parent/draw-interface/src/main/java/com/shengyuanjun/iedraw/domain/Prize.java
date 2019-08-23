@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.io.Serializable;
 
 /**
@@ -22,6 +24,7 @@ public class Prize extends Model<Prize> {
     /**
      * 奖品表的主键
      */
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
     /**
@@ -31,6 +34,7 @@ public class Prize extends Model<Prize> {
     /**
      * 库存
      */
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private Long stock;
     /**
      * 奖品有效期开始时间
@@ -47,8 +51,10 @@ public class Prize extends Model<Prize> {
     /**
      * 中奖概率
      */
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private Float odds;
 
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private int type;
 
     @Override

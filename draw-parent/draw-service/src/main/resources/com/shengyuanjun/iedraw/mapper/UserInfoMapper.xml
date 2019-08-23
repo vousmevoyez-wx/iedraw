@@ -32,6 +32,9 @@
       #{createtime,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="com.shengyuanjun.iedraw.domain.UserInfo">
+    <selectKey  keyProperty='id' resultType='java.lang.Long' order='AFTER'  >
+      select LAST_INSERT_ID() AS id
+    </selectKey>
     insert into t_wechat_user_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">

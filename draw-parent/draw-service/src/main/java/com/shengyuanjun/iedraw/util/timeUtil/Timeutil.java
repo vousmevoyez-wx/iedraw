@@ -43,7 +43,11 @@ public class Timeutil {
 
     //换算日期
         public static String  getDayTime(String time){
-
+                if(time.length()<13){
+                    for(int i = 0 ; i <13-time.length() ; i++){
+                        time=time+"0";
+                    }
+                }
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
                 String sd = sdf.format(new Date(Long.parseLong(time))); // 时间戳转换日期

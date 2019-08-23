@@ -7,6 +7,7 @@ import com.shengyuanjun.iedraw.mapper.PrizeMapper;
 import com.shengyuanjun.iedraw.query.PrizeQuery;
 import com.shengyuanjun.iedraw.service.IPrizeService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -66,7 +67,8 @@ public class PrizeServiceImpl extends ServiceImpl<PrizeMapper, Prize> implements
 
     @Override
     public int updateStockByPrizeWinner(Prize p) {
-        return prizeMapper.updateByPrimaryKey(p);
+
+        return prizeMapper.updateByPrimaryKeySelective(p);
     }
 
 }

@@ -1,6 +1,7 @@
 package com.shengyuanjun.iedraw.service;
 
 import com.shengyuanjun.iedraw.domain.AccessToken;
+import org.springframework.stereotype.Service;
 
 /**
  * @program: isfollow
@@ -14,7 +15,6 @@ import com.shengyuanjun.iedraw.domain.AccessToken;
 
 public interface TokenService {
     public String getAccess_token() ;
-    public int saveToken(AccessToken accesstoken);
     public int updateToken(AccessToken token);
     //通过id取access_token值
     AccessToken getAccessTokenFromDBById(int i);

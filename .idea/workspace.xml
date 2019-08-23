@@ -2,32 +2,253 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b607cb-c7f5-4dc6-8d16-05e05215cb51" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/controller/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/controller/RedisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/AjaxResp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/CloseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/RedisUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/Base64Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/CacheUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/CalulateTwoLanLon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/config/AccessToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/util/TokenProccessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/util/TokenTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/web/controller/OAuthToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/web/controller/OAuthTokenManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/filter/CorsFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/xx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/iedraw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/iedraw.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/28cfb7fb-3d82-4c43-9ac1-0e4eeec0cf19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/28cfb7fb-3d82-4c43-9ac1-0e4eeec0cf19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/basic-util.iml" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/basic-util.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/AjaxResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/BaseQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/BaseQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/BitStatesUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/BitStatesUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/ClassUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/ClassUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/CodeGenerateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/CodeGenerateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/GlobalSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/GlobalSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/LetterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/LetterUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/ProductStateConsts.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/ProductStateConsts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PropertiesHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/PropertiesHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/StrUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/StrUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/encrypt/DES.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/encrypt/DES.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/encrypt/MD5.java" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/src/main/java/com/shengyuanjun/iedraw/encrypt/MD5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/basic-util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/basic-util/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic-code/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/basic-code/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/code-generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/code-generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/java/com/shengyuanjun/iedraw/GenteratorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/mybatis-plus-iedraw.properties" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/mybatis-plus-iedraw.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/ClientHystrixFallbackFactory.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/client.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/src/main/resources/templates/query.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/mybatis-plus-iedraw.properties" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/mybatis-plus-iedraw.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/ClientHystrixFallbackFactory.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/ClientHystrixFallbackFactory.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/client.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/client.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/classes/templates/query.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/classes/templates/query.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/code-generator/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code-generator/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/config-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/config-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-interface/common-interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-interface/common-interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-interface/src/main/java/com/shengyuanjun/iedraw/client/PageClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-interface/src/main/java/com/shengyuanjun/iedraw/client/RedisClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-interface/src/main/java/com/shengyuanjun/iedraw/client/RedisClientFallbackFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-interface/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-interface/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-interface/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/common-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/common-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/controller/FastDfsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/controller/FastDfsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/FastDfsApiOpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/FastDfsApiOpr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/src/main/resources/fdfs_client.conf" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/resources/fdfs_client.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/target/classes/fdfs_client.conf" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/target/classes/fdfs_client.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/common-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/common-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-common/draw-common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-common/draw-common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/draw-interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/draw-interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/AccessToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/AccessToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/JsapiTIcket.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/JsapiTIcket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/handlers/MyImageAddr.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/handlers/MyImageAddr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/ActivityTimeQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/ActivityTimeQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/CustomizeQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/CustomizeQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/ParticipationRestrictionQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/ParticipationRestrictionQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/PrizeQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/PrizeQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/PrizeRecordQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/PrizeRecordQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/QuotationsQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/QuotationsQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/WechatUserInfoQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/query/WechatUserInfoQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-interface/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-interface/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/draw-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/draw-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/MyWebAppConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/MyWebAppConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CustomizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CustomizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GZHController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GZHController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GetSignatureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GetSignatureController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ParticipationRestrictionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ParticipationRestrictionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeRecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/QuotationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/QuotationsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/SendMsgController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WechatUserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WechatUserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/AccessTokenMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/AccessTokenMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/CustomizeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/CustomizeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/UserInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/UserInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IActivityTimeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IActivityTimeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/ICustomizeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/ICustomizeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/UserInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/UserInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/ActivityTimeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/ActivityTimeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/CustomizeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/CustomizeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/UserInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/test/WxQRCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/test/WxQRCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/util/MyX509TrustManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/util/MyX509TrustManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/util/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/util/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/util/WeixinUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Code/util/WeixinUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/GenerateCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/GenerateCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/QrCodeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/QrCodeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/Swagger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/WXMsg/TestWX.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/WXMsg/TestWX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/MyX509TrustManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/MyX509TrustManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/TemplateData.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/TemplateData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/TestWX.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/TestWX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/WX_HttpsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/WX_HttpsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/WX_TemplateMsgUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/WX_TemplateMsgUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/WX_UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/WX_UserUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/CheckUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/CheckUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/HttpGetUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/HttpGetUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/XMLTOMAP.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/XMLTOMAP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/AccessTokenScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/AccessTokenScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/DrawUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/DrawUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/GetSignature.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/GetSignature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/HttpGetUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/HttpGetUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/MessageFrom.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/MessageFrom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/NameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/NameUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/RandomUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/SHA1Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/SHA1Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/erweimautil/BufferedImageLuminanceSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/erweimautil/BufferedImageLuminanceSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/erweimautil/QRCodeJunpGZH.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/erweimautil/QRCodeJunpGZH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/erweimautil/QRCodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/erweimautil/QRCodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/getutil/HttpGetUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/getutil/HttpGetUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/TemplateData.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/TemplateData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/WX_HttpsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/WX_HttpsUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/WX_TemplateMsgUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/WX_TemplateMsgUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/WX_UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/msgutil/WX_UserUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/postutil/URLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/postutil/URLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/timeUtil/Timeutil.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/timeUtil/Timeutil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/AccessTokenMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/AccessTokenMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/CustomizeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/CustomizeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/ParticipationRestrictionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/ParticipationRestrictionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/constants/constant.properties" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/constants/constant.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/AccessTokenMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/AccessTokenMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/ActivityTimeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/CustomizeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/CustomizeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/ParticipationRestrictionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/ParticipationRestrictionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/UserInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/com/shengyuanjun/iedraw/mapper/UserInfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/constants/constant.properties" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/classes/constants/constant.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/test/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iedraw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/iedraw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-interface/plat-interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-interface/plat-interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-interface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-interface/src/main/java/com/shengyuanjun/iedraw/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-interface/src/main/java/com/shengyuanjun/iedraw/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-interface/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-interface/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-interface/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-interface/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-parent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-parent.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/plat-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/plat-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/web/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/web/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/plat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/plat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plat-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plat-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/DocumentationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/DocumentationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zuul-gateway/src/test/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul-gateway/src/test/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplicationTests.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/eureka-server/target/" />
-    <ignored path="$PROJECT_DIR$/zuul-gateway/target/" />
-    <ignored path="$PROJECT_DIR$/basic-code/target/" />
-    <ignored path="$PROJECT_DIR$/basic-code/basic-util/target/" />
-    <ignored path="$PROJECT_DIR$/plat-parent/target/" />
-    <ignored path="$PROJECT_DIR$/plat-parent/plat-interface/target/" />
-    <ignored path="$PROJECT_DIR$/plat-parent/plat-service/target/" />
-    <ignored path="$PROJECT_DIR$/draw-parent/target/" />
-    <ignored path="$PROJECT_DIR$/draw-parent/draw-interface/target/" />
-    <ignored path="$PROJECT_DIR$/draw-parent/draw-service/target/" />
-    <ignored path="$PROJECT_DIR$/config-server/target/" />
-    <ignored path="$PROJECT_DIR$/code-generator/target/" />
-    <ignored path="$PROJECT_DIR$/draw-common/target/" />
-    <ignored path="$PROJECT_DIR$/draw-common/common-interface/target/" />
-    <ignored path="$PROJECT_DIR$/draw-common/common-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,134 +294,23 @@
   <component name="FavoritesManager">
     <favorites_list name="iedraw" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>jxb-zbh.jxbscbd.com</find>
-      <find>selectRepeat</find>
-      <find>gopsaveurl</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>192.168.0.32</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/UserInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/JsapiTIcket.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/JsapiTicketScheduler.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/JsapiticketService.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/JsapiticketMapper.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/JsapiticketServiceImpl.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/JsapiticketMapper.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/SHA1Util.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GetSignatureController.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/GetSignature.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/AccessTokenScheduler.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-interface/src/main/java/com/shengyuanjun/iedraw/domain/Prize.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/NewController.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gq/MyX509TrustManager.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gq/utils/CheckUtil.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/gzhfwq/utils/CheckUtil.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/SendMsgController.java" />
-        <option value="$PROJECT_DIR$/zuul-gateway/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/plat-parent/plat-service/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/draw-common/common-service/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/draw-common/common-service/src/main/resources/fdfs_client.conf" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/MyWebAppConfigurer.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/GenerateCode.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/constants/constant.properties" />
-        <option value="$PROJECT_DIR$/plat-parent/plat-service/pom.xml" />
-        <option value="$PROJECT_DIR$/plat-parent/plat-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/plat-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/basic-code/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java" />
-        <option value="$PROJECT_DIR$/draw-common/common-service/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-common/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-common/common-interface/pom.xml" />
-        <option value="$PROJECT_DIR$/config-server/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/pom.xml" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeService.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java" />
-        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml" />
-        <option value="$PROJECT_DIR$/config-server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/Program Files/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -210,88 +320,13 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
+  <component name="ProjectId" id="1PUpFDhDavGCqiPOHJzdHWbzRUI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zuulgateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul-gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zuulgateway" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -299,7 +334,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -310,20 +351,25 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\IdeaProject\iedraw\draw-common\common-service\src\main\java\com\shengyuanjun\iedraw\util" />
+      <recent name="D:\IdeaProject\iedraw\plat-parent\plat-interface\src\main\java\com\shengyuanjun\iedraw\domain" />
+      <recent name="D:\IdeaProject\iedraw\plat-parent\plat-service\src\main\java\com\shengyuanjun\iedraw\util" />
+      <recent name="D:\IdeaProject\iedraw\draw-common\common-service\src\main\java\com\shengyuanjun\iedraw\controller" />
       <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\controller" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\resources" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\util" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.shengyuanjun.iedraw.service.impl" />
+      <recent name="com.shengyuanjun.iedraw.test.sendtextmsgTest" />
+      <recent name="com.shengyuanjun.iedraw.test.WXMsg.msgTestText.MessageUtil" />
+      <recent name="com.shengyuanjun.iedraw.test.WXMsg.msgTestText" />
+      <recent name="com.shengyuanjun.iedraw.test.WXMsg.msgTestText.send" />
+      <recent name="com.shengyuanjun.iedraw.test.WXMsg.msgTestText.pojo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\resources\static" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test\gq\utils" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test\gq" />
-      <recent name="D:\IdeaProject\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\controller" />
+      <recent name="E:\jxb\iedraw\draw-parent\draw-service\src\main\resources" />
+      <recent name="E:\jxb\iedraw\zuul-gateway\src\main\resources" />
+      <recent name="E:\jxb\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\controller" />
+      <recent name="E:\jxb\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test\sendtextmsgtest2" />
+      <recent name="E:\jxb\iedraw\draw-parent\draw-service\src\main\java\com\shengyuanjun\iedraw\test\sendtextmsgTest" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -338,13 +384,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZuulGatewayApplication">
-    <configuration name="DrawUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.shengyuanjun.iedraw.util.DrawUtil" />
+  <component name="RunManager" selected="Spring Boot.DrawServiceApplication">
+    <configuration name="GZHController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shengyuanjun.iedraw.controller.GZHController" />
       <module name="draw-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.shengyuanjun.iedraw.util.*" />
+          <option name="PATTERN" value="com.shengyuanjun.iedraw.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -434,7 +480,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.GenteratorCode" />
-      <item itemvalue="Application.DrawUtil" />
+      <item itemvalue="Application.GZHController" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
       <item itemvalue="Spring Boot.ZuulGatewayApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
@@ -446,8 +492,8 @@
       <list>
         <item itemvalue="Spring Boot.DrawServiceApplication" />
         <item itemvalue="Spring Boot.CommonServiceApplication" />
+        <item itemvalue="Application.GZHController" />
         <item itemvalue="Spring Boot.PlatServiceApplication" />
-        <item itemvalue="Application.DrawUtil" />
         <item itemvalue="Application.GenteratorCode" />
       </list>
     </recent_temporary>
@@ -477,6 +523,37 @@
       <workItem from="1565226861918" duration="124663000" />
       <workItem from="1565486453238" duration="50655000" />
       <workItem from="1565571853426" duration="1874000" />
+      <workItem from="1565659149895" duration="42375000" />
+      <workItem from="1565751037891" duration="37607000" />
+      <workItem from="1565833040198" duration="70262000" />
+      <workItem from="1565913676164" duration="10900000" />
+      <workItem from="1565926218655" duration="3682000" />
+      <workItem from="1565938425128" duration="14704000" />
+      <workItem from="1565955259092" duration="10792000" />
+      <workItem from="1566007877400" duration="214000" />
+      <workItem from="1566008227645" duration="5841000" />
+      <workItem from="1566017892612" duration="7305000" />
+      <workItem from="1566026532351" duration="15190000" />
+      <workItem from="1566108148865" duration="3359000" />
+      <workItem from="1566115568728" duration="1160000" />
+      <workItem from="1566134086076" duration="8000" />
+      <workItem from="1566134300003" duration="1449000" />
+      <workItem from="1566136591280" duration="366000" />
+      <workItem from="1566175967568" duration="34332000" />
+      <workItem from="1566214018874" duration="14377000" />
+      <workItem from="1566265445186" duration="10158000" />
+      <workItem from="1566280552151" duration="15802000" />
+      <workItem from="1566351152511" duration="246000" />
+      <workItem from="1566351435086" duration="10425000" />
+      <workItem from="1566363439373" duration="1515000" />
+      <workItem from="1566366758531" duration="23798000" />
+      <workItem from="1566394639191" duration="1388000" />
+      <workItem from="1566442692173" duration="133000" />
+      <workItem from="1566442839489" duration="1436000" />
+      <workItem from="1566444547277" duration="794000" />
+      <workItem from="1566462643800" duration="3111000" />
+      <workItem from="1566468739555" duration="84000" />
+      <workItem from="1566468959260" duration="1064000" />
     </task>
     <task id="LOCAL-00001" summary="修改LoginController">
       <created>1564461149135</created>
@@ -600,9 +677,6 @@
     <option name="localTasksCounter" value="18" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="377379000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -611,84 +685,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
-      <window_info id="Web" order="4" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
-      <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49919224" visible="true" weight="0.25266525" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3286334" />
-      <window_info anchor="bottom" id="Problems" order="4" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2657267" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.30260304" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.31019524" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="14" weight="0.40238613" />
-      <window_info anchor="bottom" id="TODO" order="15" weight="0.329718" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.13432837" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Bean Validation" order="6" weight="0.16311301" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.18283582" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="3" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
-      <window_info id="Web" order="4" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
-      <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49919224" visible="true" weight="0.2185501" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3286334" />
-      <window_info anchor="bottom" id="Problems" order="4" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" />
-      <window_info anchor="bottom" id="Database Changes" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2657267" />
-      <window_info anchor="bottom" id="Spring" order="8" weight="0.30260304" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.31019524" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="Run" order="14" weight="0.3438178" />
-      <window_info anchor="bottom" id="TODO" order="15" weight="0.329718" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.13432837" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Bean Validation" order="6" weight="0.16311301" />
-      <window_info anchor="right" id="Maven" order="7" visible="true" weight="0.18283582" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -702,20 +698,7 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
@@ -751,462 +734,13 @@
     <MESSAGE value="修改IP地址" />
     <option name="LAST_COMMIT_MESSAGE" value="修改IP地址" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/iedraw$DrawServiceApplication.ic" NAME="DrawServiceApplication Coverage Results" MODIFIED="1565357450850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.shengyuanjun.iedraw.*</FILTER>
     </SUITE>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WechatUserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/constants/constant.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/SwaggerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/DocumentationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/FastDfsApiOpr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/config/Swagger2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/util/NameUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/config/MyWebAppConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_211/src.zip!/javax/imageio/ImageIO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1511" column="26" selection-start-line="1511" selection-start-column="26" selection-end-line="1511" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/GenerateCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="84" column="21" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/draw-service.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeRecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PrizeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="46" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="57" column="12" selection-start-line="57" selection-start-column="12" selection-end-line="57" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code-generator/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-642" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-code/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/controller/FastDfsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-interface/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="18" selection-start-line="18" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8844">
-          <caret line="425" column="17" selection-start-line="425" selection-start-column="17" selection-end-line="425" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="193" column="42" lean-forward="true" selection-start-line="193" selection-start-column="42" selection-end-line="193" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/IPrizeRecordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="48" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/PrizeRecordServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
-          <folding>
-            <element signature="e#2015#2016#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2225#2226#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/PrizeRecordMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="223" column="11" selection-start-line="223" selection-start-column="11" selection-end-line="223" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/OutOfTimeShow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-server/src/main/java/com/shengyuanjun/iedraw/eureka/eurekaserver/EurekaServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="68" lean-forward="true" selection-start-line="16" selection-start-column="68" selection-end-line="16" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config-server/src/main/java/com/shengyuanjun/iedraw/ConfigServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plat-parent/plat-service/src/main/java/com/shengyuanjun/iedraw/PlatServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/CommonServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/DrawServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/ZuulGatewayApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/java/com/shengyuanjun/iedraw/zuul/zuulgateway/config/GlobalCorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>iedraw</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>config-server</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

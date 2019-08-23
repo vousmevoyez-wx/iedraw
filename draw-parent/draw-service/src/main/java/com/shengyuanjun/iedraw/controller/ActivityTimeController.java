@@ -18,18 +18,14 @@ public class ActivityTimeController {
     public IActivityTimeService activityTimeService;
 
     /**
-    * 保存和修改公用的
+    * 保存修改的时间
     * @param activityTime  传递的实体
     * @return Ajaxresult转换结果
     */
-    @RequestMapping(value="/",method= RequestMethod.POST)
+    @RequestMapping(value="/updateTime",method= RequestMethod.POST)
     public AjaxResult save(@RequestBody ActivityTime activityTime){
         try {
-            if(activityTime.getId()!=null){
-                activityTimeService.updateById(activityTime);
-            }else{
-                activityTimeService.insert(activityTime);
-            }
+            activityTimeService.updateActivityTime(activityTime);
             return AjaxResult.me();
         } catch (Exception e) {
             e.printStackTrace();
