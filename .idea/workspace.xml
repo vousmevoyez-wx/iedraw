@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18b607cb-c7f5-4dc6-8d16-05e05215cb51" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/controller/FileUploadController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/controller/RedisController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/draw-common/common-service/src/main/java/com/shengyuanjun/iedraw/util/AjaxResp.java" afterDir="false" />
@@ -282,6 +283,13 @@
     <ignored path="$PROJECT_DIR$/draw-common/common-service/target/" />
     <ignored path="$PROJECT_DIR$/draw-parent/draw-interface/target/" />
     <ignored path="$PROJECT_DIR$/plat-parent/plat-service/target/" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/draw-parent/draw-service/target/" />
+    <ignored path="$PROJECT_DIR$/draw-parent/target/" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,24 +338,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/CustomizeMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="726">
               <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+=======
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CustomizeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1628">
               <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/sendtextmsgTest/MessageUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1430">
+              <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/ICustomizeService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -368,6 +395,14 @@
                 <element signature="e#1841#1842#0" expanded="true" />
                 <element signature="e#1903#1904#0" expanded="true" />
                 <element signature="e#1974#1975#0" expanded="true" />
+=======
+        <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/sendtextmsgtest2/MessageUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="894">
+              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
               </folding>
             </state>
           </provider>
@@ -390,8 +425,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/CustomizeMapper.xml" />
         <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/service/impl/CustomizeServiceImpl.java" />
+=======
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/sendtextmsgtest2/MessageUtil.java" />
+        <option value="$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/sendtextmsgTest/MessageUtil.java" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
       </list>
     </option>
   </component>
@@ -415,11 +456,14 @@
       <select />
     </treeState>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1078" />
     <option name="height" value="1047" />
   </component>
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
   <component name="ProjectId" id="1PUpFDhDavGCqiPOHJzdHWbzRUI" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -429,6 +473,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -446,6 +495,16 @@
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
               <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
               <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+            </path>
+            <path>
+              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
+              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
@@ -470,6 +529,10 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
             </path>
             <path>
               <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
@@ -480,16 +543,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iedraw" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
-              <item name="draw-parent" type="462c0819:PsiDirectoryNode" />
-              <item name="draw-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iedraw" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -521,13 +575,18 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -760,7 +819,10 @@
       <workItem from="1566462643800" duration="3111000" />
       <workItem from="1566468739555" duration="84000" />
       <workItem from="1566468959260" duration="1064000" />
+<<<<<<< HEAD
       <workItem from="1566609155511" duration="563000" />
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
     </task>
     <task id="LOCAL-00001" summary="修改LoginController">
       <created>1564461149135</created>
@@ -885,7 +947,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="11297000" />
+=======
+    <option name="totallyTimeSpent" value="594000" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -897,6 +963,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
@@ -934,6 +1001,83 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
+      <window_info id="Web" order="4" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
+      <window_info id="Designer" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49919224" visible="true" weight="0.21108742" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3286334" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.36334056" />
+      <window_info anchor="bottom" id="Problems" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2657267" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.30260304" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.34815618" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="14" weight="0.5694143" />
+      <window_info anchor="bottom" id="TODO" order="15" weight="0.329718" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Database" order="3" weight="0.13432837" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.16311301" />
+      <window_info anchor="right" id="Maven" order="7" weight="0.19189766" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
+      <window_info id="Web" order="4" sideWeight="0.50080776" side_tool="true" weight="0.2153518" />
+      <window_info id="Designer" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49919224" visible="true" weight="0.26066098" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3286334" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.36334056" />
+      <window_info anchor="bottom" id="Problems" order="4" />
+      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="bottom" id="Database Changes" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.2657267" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.30260304" />
+      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.34815618" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="14" weight="0.8449024" />
+      <window_info anchor="bottom" id="TODO" order="15" weight="0.329718" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.32995737" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Database" order="3" weight="0.13432837" />
+      <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Bean Validation" order="6" weight="0.16311301" />
+      <window_info anchor="right" id="Maven" order="7" visible="true" weight="0.16204691" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout-to-restore>
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -999,6 +1143,7 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/zuul-gateway/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1012,6 +1157,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/PGController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WechatUserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1232">
+          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ActivityTimeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1701#1702#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13574">
+          <caret line="618" column="47" selection-start-line="618" selection-start-column="47" selection-end-line="618" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/CustomizeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GetSignatureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/GZHController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/ParticipationRestrictionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/controller/WeChatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/sendtextmsgtest2/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="894">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
           <folding>
             <element signature="e#338#339#0" expanded="true" />
             <element signature="e#365#366#0" expanded="true" />
@@ -1019,6 +1238,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/resources/com/shengyuanjun/iedraw/mapper/CustomizeMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
@@ -1051,6 +1271,14 @@
             <element signature="e#1841#1842#0" expanded="true" />
             <element signature="e#1903#1904#0" expanded="true" />
             <element signature="e#1974#1975#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/draw-parent/draw-service/src/main/java/com/shengyuanjun/iedraw/test/sendtextmsgTest/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="65" column="52" selection-start-line="65" selection-start-column="52" selection-end-line="65" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
           </folding>
         </state>
       </provider>

@@ -6,7 +6,10 @@ import com.shengyuanjun.iedraw.test.gzhfwq.utils.CheckUtil;
 import com.shengyuanjun.iedraw.test.gzhfwq.utils.HttpGetUtil;
 import com.shengyuanjun.iedraw.test.gzhfwq.utils.XMLTOMAP;
 import com.shengyuanjun.iedraw.test.sendtextmsgtest2.MessageUtil;
+<<<<<<< HEAD
 import org.dom4j.DocumentException;
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.PropertySource;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\AccessToken.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\UserInfo.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\ActivityTimeQuery.java
@@ -19,3 +20,26 @@ D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\ActivityTime.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\QuotationsQuery.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\TokenuserQuery.java
+=======
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\ActivityTimeQuery.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\TokenuserQuery.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\UserInfo.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\CustomizeQuery.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\Tokenuser.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\Customize.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\Prize.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\Quotations.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\ParticipationRestriction.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\PrizeRecord.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\PrizeRecordQuery.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\WechatUserInfoQuery.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\ParticipationTip.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\QuotationsQuery.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\handlers\MyImageAddr.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\JsapiTIcket.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\WechatUserInfo.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\PrizeQuery.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\AccessToken.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\ActivityTime.java
+E:\jxb\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\ParticipationRestrictionQuery.java
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca

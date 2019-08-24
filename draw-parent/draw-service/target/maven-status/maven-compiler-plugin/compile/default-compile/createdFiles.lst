@@ -34,14 +34,20 @@ com\shengyuanjun\iedraw\test\gzhfwq\WX_TemplateMsgUtil.class
 com\shengyuanjun\iedraw\service\IParticipationRestrictionService.class
 com\shengyuanjun\iedraw\test\sendtextmsgTest\MessageUtil.class
 com\shengyuanjun\iedraw\util\erweimautil\QRCodeJunpGZH.class
+<<<<<<< HEAD
 com\shengyuanjun\iedraw\util\SHA1Util.class
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
 com\shengyuanjun\iedraw\service\impl\PrizeRecordServiceImpl.class
 com\shengyuanjun\iedraw\service\TokenService.class
 com\shengyuanjun\iedraw\util\CacheUtil$Entity.class
 com\shengyuanjun\iedraw\mapper\UserInfoMapper.class
 com\shengyuanjun\iedraw\test\gzhfwq\TemplateData.class
 com\shengyuanjun\iedraw\util\erweimautil\QRCodeUtil.class
+<<<<<<< HEAD
 com\shengyuanjun\iedraw\util\getutil\HttpGetUtil.class
+=======
+>>>>>>> c0cffafea00f98396e8c3875c399de7b9e0cecca
 com\shengyuanjun\iedraw\service\impl\TokenuserServiceImpl.class
 com\shengyuanjun\iedraw\test\QrCodeTest.class
 com\shengyuanjun\iedraw\test\sendtextmsgtest2\MessageUtil.class
