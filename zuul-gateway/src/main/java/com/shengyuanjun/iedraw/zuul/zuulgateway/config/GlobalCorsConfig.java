@@ -5,24 +5,21 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
-import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class GlobalCorsConfig{
-    @Bean
+@EnableWebMvc
+public class GlobalCorsConfig implements WebMvcConfigurer {
+    /*@Bean
     public CorsFilter corsFilter() {
         //1.添加CORS配置信息
         CorsConfiguration config = new CorsConfiguration();
         //1) 允许的域,不要写*，否则cookie就无法使用了
-        config.addAllowedOrigin("http://localhost:6001");
-//        config.addAllowedOrigin("http://jxb-zbh.jxbscbd.com:6001");
-//        config.addAllowedOrigin("http://jxb-zbh.jxbscbd.com/services/draw/signature/signa");
+//        config.addAllowedOrigin("http://localhost:6001");
+//        config.addAllowedOrigin("http://192.168.0.32:6001");
+        config.addAllowedOrigin("http://jxb-zbh.jxbscbd.com:6001");
         //2) 是否发送Cookie信息
         config.setAllowCredentials(true);
         //3) 允许的请求方式
@@ -45,6 +42,30 @@ public class GlobalCorsConfig{
         configSource.registerCorsConfiguration("/**", config);
         //3.返回新的CorsFilter.
         return new CorsFilter(configSource);
+    }*/
+
+
+    @Bean
+    public CorsFilter corsFilter() {
+        final UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
+        final CorsConfiguration corsConfiguration = new CorsConfiguration();
+        /*是否允许请求带有验证信息*/
+        corsConfiguration.setAllowCredentials(true);
+        /*允许访问的客户端域名*/
+        corsConfiguration.addAllowedOrigin("*");
+        /*允许服务端访问的客户端请求头*/
+        corsConfiguration.addAllowedHeader("*");
+        /*允许访问的方法名,GET POST等*/
+        corsConfiguration.addAllowedMethod("*");
+        urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
+        return new CorsFilter(urlBasedCorsConfigurationSource);
     }
 
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("swagger-ui.html")
+                .addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
 }

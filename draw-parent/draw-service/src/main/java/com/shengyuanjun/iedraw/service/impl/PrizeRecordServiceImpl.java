@@ -67,11 +67,6 @@ public class PrizeRecordServiceImpl extends ServiceImpl<PrizeRecordMapper, Prize
     }
 
     @Override
-    public List<PrizeRecord> showpzr(Long id) {
-        return prizeRecordMapper.showpzr(id);
-    }
-
-    @Override
     public int updateStatus(PrizeRecord pr) {
         return prizeRecordMapper.updateByPrimaryKeySelective(pr);
     }
@@ -83,6 +78,15 @@ public class PrizeRecordServiceImpl extends ServiceImpl<PrizeRecordMapper, Prize
     @Override
     public List<PrizeRecord> selectAll() {
         return prizeRecordMapper.showAll();
+    }
+
+    @Override
+    public PrizeRecord selectByGoodsCode(PrizeRecord cus) {
+        return prizeRecordMapper.selectByGoodsCode(cus);
+    }
+
+    @Override
+    public int updateByGoodsCode(PrizeRecord pz) {return prizeRecordMapper.updateByGoodsCode(pz);
     }
 
 }

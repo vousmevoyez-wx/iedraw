@@ -14,6 +14,8 @@ com\shengyuanjun\iedraw\query\QuotationsQuery.class
 com\shengyuanjun\iedraw\query\PrizeQuery.class
 com\shengyuanjun\iedraw\query\CustomizeQuery.class
 com\shengyuanjun\iedraw\domain\UserInfo.class
+com\shengyuanjun\iedraw\domain\Tokenuser.class
 com\shengyuanjun\iedraw\domain\PrizeRecord.class
 com\shengyuanjun\iedraw\domain\ParticipationTip.class
+com\shengyuanjun\iedraw\query\TokenuserQuery.class
 com\shengyuanjun\iedraw\handlers\MyImageAddr.class

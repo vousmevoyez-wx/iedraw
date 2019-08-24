@@ -23,4 +23,9 @@ public interface ICustomizeService extends IService<Customize> {
 
     public Customize selectCustomizeById(Long quotationsstatus);
 
+    int updateByGoodsCode(Customize cum);
+
+    Customize selectByGoodsCode(Customize c);
+
+    int updateCustomize(Customize c1);
 }

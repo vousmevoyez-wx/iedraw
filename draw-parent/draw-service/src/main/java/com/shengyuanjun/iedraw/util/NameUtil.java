@@ -61,24 +61,6 @@ public class NameUtil {
     }
 
     /**
-     * 返回一个定长的随机纯大写字母字符串(只包含大小写字母)
-     * @param length 随机字符串长度
-     * @return 随机字符串
-     */
-    public static String generateLowerStr(int length) {
-        return generateMixStr(length).toLowerCase();
-    }
-
-    /**
-     * 返回一个定长的随机纯小写字母字符串(只包含大小写字母)
-     * @param length 随机字符串长度
-     * @return 随机字符串
-     */
-    public static String generateUpperStr(int length) {
-        return generateMixStr(length).toUpperCase();
-    }
-
-    /**
      * 生成一个定长的纯0字符串
      * @param length 字符串长度
      * @return 纯0字符串

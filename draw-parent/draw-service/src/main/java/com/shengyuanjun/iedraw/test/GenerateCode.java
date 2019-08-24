@@ -82,7 +82,7 @@ public class GenerateCode {
 
                 tempFile.mkdirs();
             }
-            ImageIO.write(image, format, new File("/"+from+"/"+name+".png"));
+            ImageIO.write(image, format, new File("/user/jxb/"+from+"/"+name+".png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

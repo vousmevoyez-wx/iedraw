@@ -1,4 +1,8 @@
 com\shengyuanjun\iedraw\CommonServiceApplication.class
-com\shengyuanjun\iedraw\util\FastDfsApiOpr.class
+com\shengyuanjun\iedraw\util\RedisUtils.class
 com\shengyuanjun\iedraw\config\Swagger2Config.class
-com\shengyuanjun\iedraw\controller\FastDfsController.class
+com\shengyuanjun\iedraw\controller\RedisController.class
+com\shengyuanjun\iedraw\util\MD5Util.class
+com\shengyuanjun\iedraw\util\CloseUtil.class
+com\shengyuanjun\iedraw\controller\FileUploadController.class
+com\shengyuanjun\iedraw\util\AjaxResp.class

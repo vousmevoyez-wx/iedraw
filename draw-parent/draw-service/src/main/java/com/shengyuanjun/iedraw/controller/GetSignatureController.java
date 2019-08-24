@@ -2,11 +2,12 @@ package com.shengyuanjun.iedraw.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.shengyuanjun.iedraw.mapper.AccessTokenMapper;
+import com.shengyuanjun.iedraw.service.TokenService;
+import com.shengyuanjun.iedraw.test.tokentest.NewTokenTester;
 import com.shengyuanjun.iedraw.util.GetSignature;
-import com.shengyuanjun.iedraw.util.SHA1Util;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import net.sf.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.Map;
 
-import static com.netflix.config.DeploymentContext.ContextKey.appId;
 
 /**
  * @author Admin
@@ -31,37 +31,45 @@ import static com.netflix.config.DeploymentContext.ContextKey.appId;
 public class GetSignatureController {
 
 
+    private static final Logger logger = LoggerFactory.getLogger(PGController.class);
+
     @Value("${gzh.appid}")
     private String appid;
 
 
 
     @Resource
-    private AccessTokenMapper accessTokenMapper;
+    private TokenService tokenServiceImpl;
 
     //获取signature
     @RequestMapping(value = "/sign",method = RequestMethod.GET)
     public String get(String url)
     {
 
-        String accesstoken = accessTokenMapper.selectByPrimaryKey(1).getAccesstoken();
+        String accesstoken = NewTokenTester.getaccessToken();
         //GetSignature.getSignature(url,accesstoken);
         GetSignature.getSignatureFromMap(url,accesstoken);
         return "";
     }
 
+
+
     //获取signature
     @RequestMapping(value = "/signa",method = RequestMethod.GET)
     public String getSignature(String url)
     {
-        System.out.println("前端传递过来的坐标为： "+url);
-        String accesstoken = accessTokenMapper.selectByPrimaryKey(1).getAccesstoken();
-        Map<String,String> signature = GetSignature.getSignature(url,accesstoken);
+        //通过数据库数据获取accesstoken
+
+        String accesstoken = NewTokenTester.getaccessToken();
+
+        Map<String,String> signature = GetSignature.getSignature(appid,url,accesstoken);
+
 
         //Map<String,String> map =  GetSignature.getSignatureFromMap(url,accesstoken);
-
         //String appid = signature.get("appid");
+
         JSONObject jsonObject = JSONObject.fromObject(signature);
+
 //        Object[] keys = signature.keySet().toArray();
 //        Object[] values = signature.values().toArray();
 //        System.out.println("key数组:"+ Arrays.toString(keys));
@@ -78,6 +86,7 @@ public class GetSignatureController {
        //ajaxResult.setRetObj());
         String value = MapAndJson(signature);
        System.out.println("value = " + value);
+
         return  value;
         /*System.out.println("map11111 = " + map);
         String nonceStr = "nonceStr = "+ map.get("nonceStr");
@@ -87,7 +96,6 @@ public class GetSignatureController {
         value.put("appid",appid);
         return value;*/
     }
-
 
     public String MapAndJson(Map<String,String> map) {
 

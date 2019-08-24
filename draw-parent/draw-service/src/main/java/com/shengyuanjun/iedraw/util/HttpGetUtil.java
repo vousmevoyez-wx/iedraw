@@ -81,30 +81,4 @@ public class HttpGetUtil {
         return is;
     }
 
-    public static String  GetCodeRequest1 = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=APPID&redirect_uri=REDIRECT_URI&response_type=code&scope=SCOPE&state=STATE#wechat_redirect";
-    public static String getCodeRequest(String appid){
-        HttpClient client = null;
-        String result = null;
-        String appId = appid;
-        String REDIRECT_URI= "";//回调请求地址
-        String SCOPE="snsapi_base";
-
-        GetCodeRequest1  = GetCodeRequest1.replace("APPID", urlEnodeUTF8(appId));
-        GetCodeRequest1  = GetCodeRequest1.replace("REDIRECT_URI",urlEnodeUTF8(REDIRECT_URI));
-        GetCodeRequest1 = GetCodeRequest1.replace("SCOPE", SCOPE);
-        result = GetCodeRequest1;
-
-        System.out.println(REDIRECT_URI);
-
-        return result;
-    }
-    public static String urlEnodeUTF8(String str){
-        String result = str;
-        try {
-            result = URLEncoder.encode(str,"UTF-8");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
 }

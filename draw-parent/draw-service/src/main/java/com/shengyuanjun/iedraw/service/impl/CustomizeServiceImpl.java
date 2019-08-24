@@ -11,6 +11,7 @@ import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -24,7 +25,7 @@ import java.util.List;
 @Service
 public class CustomizeServiceImpl extends ServiceImpl<CustomizeMapper, Customize> implements ICustomizeService {
 
-    @Autowired
+    @Resource
     private CustomizeMapper customizeMapper;
 
     public PageList<Customize> selectCustomizePage(CustomizeQuery query) {
@@ -45,5 +46,20 @@ public class CustomizeServiceImpl extends ServiceImpl<CustomizeMapper, Customize
     @Override
     public Customize selectCustomizeById(Long quotationsstatus) {
         return customizeMapper.selectByPrimaryKey(quotationsstatus);
+    }
+
+    @Override
+    public int updateByGoodsCode(Customize cum) {
+        return customizeMapper.updateByGoodsCode(cum);
+    }
+
+    @Override
+    public Customize selectByGoodsCode(Customize c) {
+        return customizeMapper.selectByGoodsCode(c);
+    }
+
+    @Override
+    public int updateCustomize(Customize c1) {
+        return  customizeMapper.updateByPrimaryKeySelective(c1);
     }
 }

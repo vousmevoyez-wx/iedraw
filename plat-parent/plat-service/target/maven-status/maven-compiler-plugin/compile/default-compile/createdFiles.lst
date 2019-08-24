@@ -1,3 +1,6 @@
-com\shengyuanjun\iedraw\config\Swagger2Config.class
-com\shengyuanjun\iedraw\PlatServiceApplication.class
+com\shengyuanjun\iedraw\util\TokenProccessor.class
 com\shengyuanjun\iedraw\web\controller\LoginController.class
+com\shengyuanjun\iedraw\config\Swagger2Config.class
+com\shengyuanjun\iedraw\config\AccessToken.class
+com\shengyuanjun\iedraw\util\TokenTools.class
+com\shengyuanjun\iedraw\PlatServiceApplication.class

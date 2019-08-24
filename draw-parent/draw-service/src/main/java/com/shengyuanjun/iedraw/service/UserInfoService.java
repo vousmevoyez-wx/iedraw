@@ -2,6 +2,9 @@ package com.shengyuanjun.iedraw.service;
 
 import com.shengyuanjun.iedraw.domain.UserInfo;
 import net.sf.json.JSONObject;
+
+import java.util.Map;
+
 /**
  * @program: isfollow
  * @description: 测试类
@@ -10,9 +13,8 @@ import net.sf.json.JSONObject;
  */
 public interface UserInfoService {
     //通过code获取openid
-    public String getOpenid(String code);
+    public Map getOpenid(String code);
 
-    public boolean judgeIsFollow(String token, String openid);
 
     public JSONObject getSNSUserInfo(String token, String openid);
 
@@ -22,4 +24,7 @@ public interface UserInfoService {
     UserInfo selectThisUser(String openid);
 
     UserInfo  selectUserById(Long id);
+
+
+    int  updateById(UserInfo backuser);
 }

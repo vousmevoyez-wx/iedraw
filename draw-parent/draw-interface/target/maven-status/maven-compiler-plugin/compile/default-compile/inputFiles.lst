@@ -11,9 +11,11 @@ D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\ParticipationTip.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\PrizeQuery.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\Quotations.java
+D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\Tokenuser.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\ParticipationRestriction.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\ParticipationRestrictionQuery.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\Prize.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\WechatUserInfoQuery.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\domain\ActivityTime.java
 D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\QuotationsQuery.java
+D:\IdeaProject\iedraw\draw-parent\draw-interface\src\main\java\com\shengyuanjun\iedraw\query\TokenuserQuery.java

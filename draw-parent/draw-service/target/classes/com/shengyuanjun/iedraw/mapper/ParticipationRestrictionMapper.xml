@@ -26,6 +26,7 @@
     id, totalparticipants, dayparticipation, totalwinningprize, daywinningprize, linkurls,
     noprize, exceeddaily, exceedtotal, longitude, latitude, range
   </sql>
+
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
          id, totalparticipants, dayparticipation, totalwinningprize, daywinningprize, linkurls,
@@ -33,6 +34,7 @@
         from t_participation_restriction
         where id = #{id,jdbcType=BIGINT}
     </select>
+
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_participation_restriction
     where id = #{id,jdbcType=BIGINT}

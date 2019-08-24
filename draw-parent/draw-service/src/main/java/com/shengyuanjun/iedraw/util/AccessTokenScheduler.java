@@ -33,10 +33,11 @@ public class AccessTokenScheduler {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
+
     //每隔100分钟执行一次
-    @Scheduled(initialDelay=3000, fixedRate = 100*60*1000)//每100分钟重新获取一次，accesstoken有效时间7200s,2小时
+    @Scheduled(initialDelay=3000, fixedRate = 60*60*1000)//每100分钟重新获取一次，accesstoken有效时间7200s,2小时
     public void testTasks() {
-        logger.info("定时任务执行时间：" + dateFormat.format(new Date()));
+        /*logger.info("定时任务执行时间：" + dateFormat.format(new Date()));
         try {
             logger.info("此处获取access_token并存入数据库。。。。。。。");
 
@@ -49,10 +50,12 @@ public class AccessTokenScheduler {
                   tokenServiceImpl.saveToken(token);
             }
 
-            logger.info("存储结束。。。。。。。。");
+            logger.info("更新accesstoken..........结束。。。。。。。。");
         } catch (Exception ex) {
             ex.printStackTrace();
-        }
+
+            logger.info("更新失败.........。。。。。。");
+        }*/
     }
 
 }

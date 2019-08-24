@@ -1,17 +1,16 @@
 package com.shengyuanjun.iedraw.controller;
 
-
 import com.shengyuanjun.iedraw.domain.*;
 import com.shengyuanjun.iedraw.service.*;
 import com.shengyuanjun.iedraw.test.GenerateCode;
-import com.shengyuanjun.iedraw.util.DrawUtil;
-import com.shengyuanjun.iedraw.util.MessageFrom;
-import com.shengyuanjun.iedraw.util.NameUtil;
+import com.shengyuanjun.iedraw.test.WXMsg.TestWX;
+import com.shengyuanjun.iedraw.test.tokentest.NewTokenTester;
+import com.shengyuanjun.iedraw.util.*;
 import com.shengyuanjun.iedraw.util.timeUtil.Timeutil;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,7 +25,6 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.*;
 
-
 /**
  * @program: gongzhongget
  * @description:
@@ -38,8 +36,10 @@ import java.util.*;
 @RequestMapping("/wx")
 public class PGController {
 
-    private static final Logger logger = LoggerFactory.getLogger(PGController.class);
 
+    private static final Logger logger = LoggerFactory.getLogger(PGController.class);
+@Resource
+private TestWX testwx;
     //获取用户信息
     @Resource
     private UserInfoService userinfoServiceImpl;
@@ -47,6 +47,8 @@ public class PGController {
     @Resource
     private IPrizeRecordService prizeRecordServiceImpl;
 
+    @Autowired
+    private ITokenuserService tokenuserService;
 
     @Resource
     private IPrizeService prizeServiceImpl;
@@ -54,8 +56,6 @@ public class PGController {
     @Resource
     private TokenService tokenServiceImpl;
 
-    @Resource
-    private ICustomizeService customizeServiceImpl;
 
     @Resource
     private IQuotationsService quotationsServiceImpl;
@@ -82,27 +82,6 @@ public class PGController {
     @Value("${url.winprizecodeurl}")
     public String winprizeurl;
 
-    /**
-     * @Description: 判断请求必须来自微信才能打开进入H5活动页面, 不能通过外部浏览器直接输入H5地址进入活动页面
-     * @Param: [response, request]
-     * @return: void
-     * @Author: gq544
-     * @date: 2019/8/7 22:28
-     */
-    @RequestMapping(value = "/active", method = RequestMethod.GET)
-    public void backActive(HttpServletResponse response, HttpServletRequest request) {
-        System.out.println("判断结果为 " + MessageFrom.msgFrom(request));
-        try {
-            if (MessageFrom.msgFrom(request)) {//判断请求是否来自于微信端
-                response.sendRedirect(h5url);
-            } else {
-                logger.info("本次请求不是来自微信端，需要重新到微信端进行访问。。。");
-                response.sendRedirect(pjurl + "ot/backwx");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     /**
      * 01
@@ -112,9 +91,10 @@ public class PGController {
      * @Author: gq544
      * @date: 2019/8/5 21:48
      */
-    @RequestMapping(value = "/pgcode", method = RequestMethod.GET)
-    public String toGetCode(HttpServletResponse response, HttpServletRequest request) {
+    @RequestMapping(value = "/pgunp", method = RequestMethod.GET)
+    public Map toGetCode(HttpServletResponse response, HttpServletRequest request) {
         String junpurl = "";
+        Map map = new HashMap();
         try {
             //判断请求是否来自于微信端
             boolean bo = MessageFrom.msgFrom(request);
@@ -122,23 +102,26 @@ public class PGController {
             if (bo) {
                 //通过微信端访问进来的请求回调请求获取code，redirect_url进行URLEncoder处理
                 String callbackurl = URLEncoder.encode(redirecturl, "UTF-8");
-                junpurl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + appid + "&redirect_uri=" + callbackurl + "&response_type=code&scope=snsapi_base&state=123&connect_redirect=#wechat_redirect";
+                junpurl = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=" + appid + "&redirect_uri=" + callbackurl + "&response_type=code&scope=snsapi_userinfo&state=123&connect_redirect=1#wechat_redirect";
 
-                //在前端重定向到回调函数获取授权code
-                response.sendRedirect(junpurl);
+                map.put("appid",appid);
+                map.put("redirecturl",junpurl);
+
+                return map;
             } else {
                 //如果不是微信登录，跳转到项目下提示页面
-                logger.info("本次请求不是来自微信端，需要重新到微信端进行访问。。。");
                 junpurl = "非微信端无法访问此页面，请到微信端进行访问。";
+                map.put("message","未关注");
+                return map;
             }
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
-            return "fail";
+            map.put("message","error");
+            return map;
         } catch (IOException e) {
-            e.printStackTrace();
-            return "fail";
+            map.put("message","error");
+            return map;
         }
-        return junpurl;
     }
 
 
@@ -148,7 +131,7 @@ public class PGController {
      * @Description: 前端页面网页授权后，获取code并发送给后台，在此方法换取用户openid，如果符合要求，则保存用户信息
      * 获取code之后。通过  https://api.weixin.qq.com/sns/oauth2/access_token?appid=APPID&secret=SECRET&code=CODE&grant_type=authorization_code
      * @Param: [request, response]
-     * @return: java.lang.String 返回状态码   1表示用户已关注且信息保存成功，1表示用户未关注公众号，2表示用户信息获取失败
+     * @return: java.lang.String 返回状态码   返回userid=0表示用户未关注，userid=-1表示用户信息获取发生异常
      * @Author: gq544
      * @date: 2019/8/4 13:54
      */
@@ -156,90 +139,87 @@ public class PGController {
     @ResponseBody
     public String GetGZHOpenid(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();
+        String tokenaccess = "";
         String value = "1";
         //预防重复请求
-        //if (session.getAttribute("code") == null) {
+        if (session.getAttribute("code") == null) {
             String code = request.getParameter("code");//获取code
-        System.out.println("前端过来 code = " + code);
-            if (!code.equals(session.getAttribute("code"))){
-                logger.info("获取code并申请获得openid...code = " + code);
-                session.setAttribute("code", code);
-                System.out.println("code =" + code);
-                String openid = userinfoServiceImpl.getOpenid(code);
-                session.setAttribute("openid", openid);
+            if (!code.equals(session.getAttribute("code"))) {
+                Map codemap = userinfoServiceImpl.getOpenid(code);
+                String openid = (String)codemap.get("openid");
+                String opemidaccesstoken = (String)codemap.get("accesstoken");
+
                 //获取openid之后通过官方接口查询用户基本信息
                 //从数据库中获取此时的access_token
-                AccessToken accesstoken = tokenServiceImpl.getAccessTokenFromDBById(1);
-                String token = accesstoken.getAccesstoken();
+                String accesstoken = NewTokenTester.getaccessToken();
+                if(accesstoken == null){
+
+                    tokenaccess = tokenaccess+"accesstoken查询为空";
+
+                }else{
+
+                    tokenaccess = "这是token..  ： "+accesstoken;
+
+                }
                 //通过openid和accesstoken获取用户的基本信息
-                logger.info(" /pgopen 使用openid 获取用户基本信息userinfo。。。。。。。。。。。。");
-                JSONObject json = userinfoServiceImpl.getSNSUserInfo(token, openid);
+                JSONObject json = userinfoServiceImpl.getSNSUserInfo(accesstoken, openid);
                 try {
-                    if (1 == (json.getInt("subscribe"))) {
-                        //如果用户已经关注公众号，则执行用户信息比对录入
-                        System.out.println(json);
-                        UserInfo user = new UserInfo();
+                    if(json.toString().contains("subscribe")){
+                        //已关注的状态
+                        if ("1".equals(json.getString("subscribe"))) {
+                            //如果用户已经关注公众号，则执行用户信息比对录入
+                            UserInfo user = new UserInfo();
 
-                        user.setHeadimgurl(json.getString("headimgurl"));
-                        user.setOpenid(json.getString("openid"));
-                        user.setNickname(json.getString("nickname"));
-                        user.setSex(new Byte(json.getString("sex")));
-                        user.setSubscribe(new Byte(json.getString("subscribe")));
+                            user.setHeadimgurl(json.getString("headimgurl"));
+                            user.setOpenid(json.getString("openid"));
+                            user.setNickname(json.getString("nickname"));
+                            user.setSex(new Byte(json.getString("sex")));
+                            user.setSubscribe(new Byte(json.getString("subscribe")));
 
-                        String nowtime = Timeutil.getLongTime();
+                            String nowtime = Timeutil.getLongTime();
 
-                        user.setCreatetime(Long.parseLong(nowtime));
+                            user.setCreatetime(Long.parseLong(nowtime));
 
-                        UserInfo backuser = new UserInfo();
-                        //通过用户openid查找用户信息
-                        backuser = userinfoServiceImpl.selectThisUser(openid);
-                        System.out.println("user = "+backuser);
-                        //校验是否已经录入资料结果
-                        //如果数据库没有该用户信息，则执行保存
-                        if (backuser == null) {
-                            logger.info("没有查到该用户信息，执行保存操作...");
-                            userinfoServiceImpl.saveUserInfomsg(user);
+                            UserInfo backuser = new UserInfo();
+                            //通过用户openid查找用户信息
+                            backuser = userinfoServiceImpl.selectThisUser(openid);
+                            System.out.println("user = " + backuser);
+                            //校验是否已经录入资料结果
+                            //如果数据库没有该用户信息，则执行保存
+                            if (backuser == null) {
+                                //已关注无记录
+                                userinfoServiceImpl.saveUserInfomsg(user);
+                                System.out.println("userid = " + user.getId());
+                                return "{\"userid\":\"" + user.getId() + "\"}";
+                            }else{
+                                //已关注有记录
+                                return "{\"userid\":\"" + backuser.getId() + "\"}";
+                            }
+                        } else {
+                            //未关注的状态
+                            UserInfo user = new UserInfo();
+                            user.setOpenid(json.getString("openid"));
+
+                            UserInfo backuser = new UserInfo();
+                            //通过用户openid查找用户信息
+                            backuser = userinfoServiceImpl.selectThisUser(openid);
+                            if(backuser != null){
+                                backuser.setSubscribe(new Byte("0"));
+                                userinfoServiceImpl.updateById(backuser);
+                            }
+                            return "{\"userid\":\"0\"}";
                         }
-                        logger.info("该用户已关注公众号，信息校验成功。。。");
-                    } else {
-                        logger.info("该用户并未关注。。。。。。。。。");
-                        value = "0";
+                    }else{
+                        return "{\"userid\":\"" + "  tokenaccessshow = "+ tokenaccess +"     后台拿到的code = " + code + "      code请求获取openid的value1 = "+json+"          openid换取用户信息的value2 = " + codemap.get("value") + "\"}";
                     }
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
-                    logger.info("用户数据处理失败。。。。。。...");
-                    return "2";
+                    return "{\"userid\":\"-1\"}";
                 }
             }
-       // }
-        return value;
-    }
-
-    /**
-     * @Description: 判断是否超出了范围，在范围内才能进入抽奖页面
-     * @Param: [request]
-     * @return: java.lang.Boolean
-     * @Author: gq544
-     * @date: 2019/8/9 18:00
-     */
-    @RequestMapping(value = "/inhe", method = RequestMethod.GET)
-    @ResponseBody
-    public boolean ishere(HttpServletRequest request) {
-        System.out.println("定位确认");
-        //判断范围
-        ParticipationRestriction par = participationRestrictionServiceImpl.selectParticipationRestrictionById(Long.parseLong("1"));
-        String range = par.getRange();//系统范围
-        String longitude0 = request.getParameter("longitude");
-        String latitude0 = request.getParameter("latitude");
-        Double la = Double.parseDouble(par.getLatitude()) - Double.parseDouble(latitude0);
-        Double gi = Double.parseDouble(par.getLongitude()) - Double.parseDouble(longitude0);
-
-        //判断是否在活动的地图范围内
-        if ((la * la + gi * gi) < Double.parseDouble(par.getRange()) * Double.parseDouble(par.getRange())) {
-            return true;
-        } else {
-            return false;
+            return value;
         }
+        return value;
     }
 
     /**
@@ -250,64 +230,70 @@ public class PGController {
      * @return: java.lang.String
      * @Author: gq544
      * @date: 2019/8/6 11:03
+     * return  map(status,value)  如果status为-1，用户id获取错误，0，用户未关注公众号，   1，用户信息正常，已成功获取用户id
+     *                                  2：超出当日次数    3：超出总抽奖次数    4： 不在活动范围内
      */
     @RequestMapping(value = "/prizval", method = RequestMethod.GET,produces = "application/json;charset=UTF-8")
     @ResponseBody
     @Transactional  //添加事务管理
-    public Map savePrizeValue(HttpServletRequest request) {
-        
+    public Map savePrizeValue(HttpServletRequest request,String userid) {
+        String testmsg = "";
+
         Map map = new HashMap();
+        if(Integer.parseInt(userid) < 0){
+            map.put("status","-1");
+            return map;
+        }else if(Integer.parseInt(userid) == 0){
+            map.put("status","0");
+            return map;
+        }
 
-        System.out.println("定位确认");
-
-        String longitude0 =  request.getParameter("longitude");
+      String longitude0 =  request.getParameter("longitude");
         String latitude0 =  request.getParameter("latitude");
 
-        //判断范围
+        if(longitude0==null || latitude0==null){
+            map.put("status","5");
+            map.put("msg","未获取到地理位置信息");
+            return map;
+        }
         ParticipationRestriction par = participationRestrictionServiceImpl.selectParticipationRestrictionById(Long.parseLong("3"));
-        String range = par.getRange();//系统范围
-        System.out.println("td = " + longitude0);
-        System.out.println("ti = " + latitude0);
-        Double la = Double.parseDouble(par.getLatitude()) - Double.parseDouble(latitude0);
-        Double gi = Double.parseDouble(par.getLongitude()) - Double.parseDouble(longitude0);
+       String range = par.getRange();//系统范围
         //判断是否在活动的地图范围内
-       if ((la * la + gi * gi) < Double.parseDouble(par.getRange()) * Double.parseDouble(par.getRange())) {
-            logger.info("判断的值在范围以内");
-            HttpSession session = request.getSession();
-            //zaisession中获取openid来查询用户信息
-            String openid = (String) session.getAttribute("openid");
-            System.out.println("收到openid = " + openid);
-            UserInfo user = userinfoServiceImpl.selectThisUser("asd4564");
-            System.out.println("par = " + par);
+        double distence = CalulateTwoLanLon.getDistance(Double.parseDouble(longitude0),Double.parseDouble(latitude0),Double.parseDouble(par.getLongitude()),Double.parseDouble(par.getLatitude()));
+        distence = distence * 1000;
+
+
+        if (distence <= Double.parseDouble(par.getRange())) {
+
+            System.out.println("userid = "+ userid);
+
+            UserInfo user = userinfoServiceImpl.selectUserById(Long.parseLong(userid));
             //查询日抽奖上限
             String dailytimes = par.getDayparticipation();
 
             //查询总参与次数
-            String Alltimes = par.getTotalparticipants();
+            String uploaduTimes = par.getTotalparticipants();
 
             System.out.println("user = " + user);
 
-            //查询本人抽奖次数
+            //查询本人抽奖次数111
             List<PrizeRecord> pzr = prizeRecordServiceImpl.selectWinTimesDaily();
             List<PrizeRecord> list = new Vector<PrizeRecord>();
-            System.out.println("times = " + Integer.parseInt(Alltimes));
             //如果总次数没有超，则判断当天总次数
-            if (pzr.size() < Integer.parseInt(Alltimes)) {
-                //获取现在时间
+            if (pzr.size() < Integer.parseInt(uploaduTimes)) {
+                //获取现在  时间
                 String nowtm = Timeutil.getLongTime();
                 Iterator<PrizeRecord> it = pzr.iterator();
-                System.out.println("pzr = " + pzr);
                 while (it.hasNext()) {
                     PrizeRecord p = it.next();
                     //用于记录当天记录次数
                     //工具类转换时间戳为日期,确定当天有效
-                    System.out.println("p = " + p);
                     if (Timeutil.getDayTime(new Date().getTime() + "").equals(Timeutil.getDayTime(p.getCreatetime() + "")) && p.getUserid() == user.getId()) {
-                        list.add(it.next());
+                        list.add(p);
                     }
                 }
                 if (list.size() > Integer.parseInt(dailytimes)) {
-                    map.put("dayup", "true");
+                    map.put("status","2");
                     return map;
                 }
         /*
@@ -315,46 +301,60 @@ public class PGController {
                     1为奖品
                     2为私人定制
          */
+
+                map.put("status","1");
+
                 ArrayList<Prize> prizes = prizeServiceImpl.selectAllPrize();
                 int i = 0;
                 int[] result = new int[4];
+                //遍历所有奖品
                 Iterator<Prize> iter = prizes.iterator();
-
+                //存放有货的奖品
                 ArrayList<Prize> AP = new ArrayList<>();
                 float obbchange = 0;
-//抽奖前库存判断
+
+                //抽奖前库存判断
                 while(iter.hasNext()){
                     Prize p= iter.next();
-                    p.setOdds((float) p.getOdds());
-                    if(p.getStock()>0){
-                        AP.add(p);
-                    }else{
-                        obbchange = obbchange + p.getOdds();
+                    Prize tem = new Prize();
+                    tem.setId(p.getId());
+                    tem.setType(p.getType());
+                    tem.setPrizename(p.getPrizename());
+                    tem.setPictureurl(p.getPictureurl());
+                    tem.setOdds(p.getOdds());
+                    tem.setStock(p.getStock());
+                    tem.setBeginvalidityperiod(p.getBeginvalidityperiod());
+                    tem.setEndvalidityperiod(p.getEndvalidityperiod());
+
+                    if(tem.getStock()<=0){
+                        obbchange = obbchange + tem.getOdds();
+                        tem.setOdds((float) 0);
                     }
+                    AP.add(tem);
                 }
-                if(obbchange > 0){
-                    Iterator<Prize> ite = AP.iterator();
-                    while(it.hasNext()){
-                        Prize p= ite.next();
-                        if(p.getType()==0){
-                            p.setOdds(p.getOdds()+obbchange);
-                        }
+
+                List<Prize> prizeList = new  ArrayList<Prize>();
+                Iterator<Prize> ite = AP.iterator();
+                int count = 0 ;
+                while(ite.hasNext()){
+                    Prize p= ite.next();
+                    if(p.getType()==0 && count==0 && obbchange > 0){
+                        p.setOdds(p.getOdds()+obbchange);
+                        count++;
                     }
+                    prizeList.add(p);
                 }
 
-
-
-                System.out.println("抽奖开始");
                 //根据参数进入抽奖工具类进行该路计算
-                int selected = DrawUtil.getPrizeIndex(AP);
-                Prize ppp = prizes.get(selected);
-                System.out.println("抽中的奖品为：" + ppp);
-
-                System.out.println("--------------------------------");
-
-                System.out.println("抽奖结束");
+                int selected = 0;
+                Prize pz1 = null;
+                //计算抽奖下标
+                selected = DrawUtil.getPrizeIndex(prizeList);
+                //结果奖品
+                pz1 = prizes.get(selected);
 
                 PrizeRecord pz = new PrizeRecord();
+
                 pz.setUserid(user.getId());
                 pz.setPrizeid(prizes.get(selected).getId());
 
@@ -364,19 +364,23 @@ public class PGController {
                 pz.setStatus(0);
                 pz.setIsdel(1);
 
-                System.out.println("继续走,pp.name = "+ppp.getPrizename());
                 /*
                     类型： 0表示优惠券
                     类型： 1表示私人定制
                     类型： 2表示奖品
                  */
-                if (ppp.getType()==0) {
-                    System.out.println("这优惠券");
+                if (pz1.getType()==0) {
+
+                    testmsg = testmsg + "优惠券奖品";
+
                     pz.setGoodscode("有赞");
                     pz.setType(0);
+
+                    //保存到中奖记录
                     prizeRecordServiceImpl.savePrizeRecord(pz);
-                } else if (ppp.getType()==1) {
-                    System.out.println("这私人定制");
+                } else if (pz1.getType()==1) {
+                    testmsg = testmsg + "私人订制提货码奖品";
+
                     String number = NameUtil.genNumberStr(5);
                     PrizeRecord p1 = new PrizeRecord();
                     p1.setGoodscode(number);
@@ -385,29 +389,33 @@ public class PGController {
                     boolean bo = true;
                     //如果该码用过，则重新生成
                     while (bo) {
-                        System.out.println("判断bo的值,其中  p1 = " + p1);
+
                         bo = (prizeRecordServiceImpl.selectGetNumber(p1) != null);
-                        System.out.println("bo = " + bo);
+
                         if (!bo) {
                             pz.setGoodscode(number);
                             Customize cu = new Customize();
-                            cu.setGoodscode(number);
+                            //cu.setGoodscode(number);
 
                             String thistime = Timeutil.getLongTime();
 
-                            cu.setCreatetime(Long.parseLong(thistime));
+                            //cu.setCreatetime(Long.parseLong(thistime));
                             pz.setType(1);
+
+                            //保存到中奖记录
                             prizeRecordServiceImpl.savePrizeRecord(pz);
-                            customizeServiceImpl.addCustomize(cu);
+                           // customizeServiceImpl.addCustomize(cu);
                             break;
                         }
                         number = NameUtil.genNumberStr(5);
                         System.out.println("again。。。");
                         p1.setGoodscode(number);
                     }
-                } else if (ppp.getType()==2) {
-                    System.out.println("这是个奖品");
+                } else if (pz1.getType()==2) {
+                    testmsg = testmsg + "获得奖品二维码";
+
                     pz.setType(2);
+
                     prizeRecordServiceImpl.savePrizeRecord(pz);
 
                     Long pzid = pz.getId();
@@ -415,136 +423,192 @@ public class PGController {
                     //随机字符串拼接时间戳生成唯一二维码图片文件名称
                     String codeName = NameUtil.generateMixStr(6) + new Date().getTime() + "";
 
-                    String jsonmsg = "{\"id\":\"" + pzid + "\",\"status\": \"0\"}";
+                    String jsonmsg = "{\"id\":\"" + pzid + "\"}";
 
                     GenerateCode.generateCode(gopsaveurl, jsonmsg, codeName);
 
                     PrizeRecord p = new PrizeRecord();
+                    //设置对象id和url
                     p.setGoodscode(winprizeurl + gopsaveurl + "/" + codeName + ".png");
                     p.setId(pzid);
+                    //对应保存url信息
                     prizeRecordServiceImpl.savePrizeRecordQRCode(p);
                 }
                 //抽奖后奖品数量减1
-                ppp.setStock(ppp.getStock()-1);
-                prizeServiceImpl.updateStockByPrizeWinner(ppp);
+                System.out.println("pz1 = "+pz1);
 
-                System.out.println("prize = "+ppp);
+                if(pz1.getStock()>0){
+                    pz1.setStock(pz1.getStock()-1);
+                    prizeServiceImpl.updateStockByPrizeWinner(pz1);
+                }
 
-                System.out.println("prize = " + ppp);
+                map.put("winner", pz1);
+                map.put("msg",testmsg);
 
-                logger.info("用户查询结果为 " + user);
-                map.put("winner", ppp);
+                String accesstoken = tokenServiceImpl.getAccessTokenFromDBById(1).getAccesstoken();
+                String prizeName  = pz1.getPrizename();
+                String openid = user.getOpenid();
+
+
+
+               testwx.senMsgActive(openid, accesstoken,prizeName);
+
                 return map;
             }else{
                 //超出总次数
-                map.put("allup", "true");
+                map.put("status","3");
+
                 return map;
             }
-       } else {
-            System.out.println("超出活动区域");
-            //超出活动区域
-            map.put("area", "out");
+        } else {
+            //超出范围
+            map.put("status","4");
+            map.put("msg","不在活动范围内");
             return map;
         }
     }
 
-    /**
-     * -1
-     * 通过openid获取userInfo基本信息
-     *
-     * @Description: 通过接口 https://api.weixin.qq.com/sns/userinfo?access_token=TOKEN&appid=APPID 获取userinfo 用户基本信息
-     * @Param: [openid]
-     * @return: java.lang.String
-     * @Author: gq544
-     * @date: 2019/8/4 14:53
-     */
-    @RequestMapping(value = "/getuserinfo", method = RequestMethod.GET)
-    @ResponseBody
-    public void GetGZHUserInfo(String openid) throws IOException {
 
-        //从数据库中获取此时的access_token
-        AccessToken accesstoken = tokenServiceImpl.getAccessTokenFromDBById(1);
-        System.out.println("accesstoken = " + accesstoken);
-        String token = accesstoken.getAccesstoken();
-        //通过openid和accesstoken获取用户的基本信息
-        JSONObject json = userinfoServiceImpl.getSNSUserInfo(token, openid);
-        logger.info("已使用openid 获取用户基本信息userinfo。。。。。。。。。。。。");
-        try {
-            if (1 == (json.getInt("subscribe"))) {
-                logger.info("该用户已关注，正在校核用户信息。。。。。。。。。");
-                System.out.println(json);
-                UserInfo user = new UserInfo();
-
-                String nowtime = Timeutil.getLongTime();
-                user.setCreatetime(Long.parseLong(nowtime));
-                System.out.println("user = " + user);
-
-                //如果数据库没有该用户信息，则执行保存
-                if (userinfoServiceImpl.selectThisUser(openid) == null) {
-
-                    userinfoServiceImpl.saveUserInfomsg(user);
-
-                }
-
-            } else {
-                logger.info("该用户并未关注。。。。。。。。。");
-            }
-        } catch (Exception e) {
-            logger.info(e.getMessage());
-            logger.info("用户数据处理失败。。。。");
-        }
-    }
-
-    @RequestMapping(value="/shwal",produces = "application/json;charset=UTF-8")
-    @ResponseBody
-    public Map showWinnerPrizes(){
-        Map map = new HashMap();
-        String openid = "asd4564";
-        UserInfo user = userinfoServiceImpl.selectThisUser(openid);
-
-        List<PrizeRecord> pzr = prizeRecordServiceImpl.selectWinTimesDaily();
-        List<PrizeRecord> list = new Vector<PrizeRecord>();
-
-        Iterator<PrizeRecord> it = pzr.iterator();
-        System.out.println("pzr = " + pzr);
-        while (it.hasNext()) {
-            PrizeRecord p = it.next();
-            System.out.println("p = " + p);
-            if (p.getUserid() == user.getId()) {
-                list.add(p);
-            }
-        }
-        map.put("抽奖用户",user);
-
-        Iterator<PrizeRecord> iterator = list.iterator();
-        while(iterator.hasNext()){
-            PrizeRecord p1 = iterator.next();
-            //0代表有赞
-            if(p1.getType()==0){
-                map.put("有赞","有赞优惠券");
-            }else if(p1.getType()==1){
-                map.put("私人订制",customizeServiceImpl.selectCustomizeById(p1.getPrizeid()));
-                System.out.println("p1.getPrizeid() = "+p1.getPrizeid());
-            }else if(p1.getType()==2){
-                map.put("奖品",prizeServiceImpl.selectPrizeById(p1.getPrizeid()));
-                System.out.println("prize 信息 "+prizeServiceImpl.selectPrizeById(p1.getPrizeid()));
-            }
-        }
-        return map;
-    }
+    /*
+    用户查询自己的中奖记录的方法
+    -1表示用户信息获取失败
+    0表示用户信息不存在
+    status=1表示用户信息正常获取并且附带一个PrizeRecord对象
+ */
     @RequestMapping("/shmin")
-    public List<PrizeRecord> getit(HttpServletRequest request){
-        logger.info("selectmyit...................");
-        HttpSession session = request.getSession();
-        String openid = (String)session.getAttribute("openid");
-        openid = "asd4564";
-        UserInfo user = userinfoServiceImpl.selectThisUser(openid);
+    public Map getit(HttpServletRequest request){
+        Map map = new HashMap();
+        String userid = request.getParameter("userid");
+        if(Integer.parseInt(userid) < 0){
+            map.put("status","-1");
+            return map;
+        }else if(Integer.parseInt(userid) == 0){
+            map.put("status","0");
+            return map;
+        }
+
+        //前端传递回来userid。后端查看用户身份
+
+        System.out.println("URL = " + request.getRequestURL());
+        System.out.println("userid = " + userid);
+        UserInfo user = userinfoServiceImpl.selectUserById(Long.parseLong(userid));
+        if(user == null){
+            map.put("status","-100");
+            map.put("msg","不存在的用户id");
+            return map;
+        }
 
         List<PrizeRecord> prc = prizeRecordServiceImpl.selectTwoTableByUserId(user.getId());
+        System.out.println("prc = " + prc);
+        //用于调用接口的时候判断过期
+        List<PrizeRecord> plist  =  new ArrayList<PrizeRecord>();
+
         Iterator<PrizeRecord> it = prc.iterator();
         while(it.hasNext()){
-            System.out.println("value = "+it.next());
+            PrizeRecord prcs =  it.next();
+            Prize pe = prizeServiceImpl.selectPrizeById(prcs.getPrizeid());
+            if(Long.parseLong(pe.getEndvalidityperiod()+"000") < new Date().getTime()){
+                if("0".equals(prcs.getStatus()+"")) {
+                    prcs.setStatus(2);
+                    plist.add(prcs);
+                }
+            }
         }
-        return prc;
+
+        boolean bo = (plist.size()> 0);
+        if(bo){
+            Iterator<PrizeRecord> itps = plist.iterator();
+            while(itps.hasNext()){
+                PrizeRecord prcse =  itps.next();
+                prcse.setStatus(2);
+                System.out.println(prizeRecordServiceImpl.updateStatus(prcse));
+            }
+        }
+        prc = prizeRecordServiceImpl.selectTwoTableByUserId(user.getId());
+
+        map.put("status","1");
+        map.put("PrizeRecord",prc);
+
+        return map;
+    }
+
+
+    /**
+     * 00001
+     *@Description: 通过前段传递过来的状态返回对应语句 6条
+     *@Param: [status]
+     *@return: java.util.List<com.example.gzher.entitys.Quotations>
+     *@Author: gq544
+     *@date: 2019/8/9 1:43
+     */
+    @RequestMapping("/words")
+    public Map  backWords(String status,String token){
+        Map map = new HashMap();
+        if(token!=null){
+            Tokenuser tokenu = tokenuserService.selectByToken(token);
+            if (tokenu==null){
+                //如果查询token为空，返回无效的token
+                map.put("code",201);
+                map.put("msg","token验证失败");
+                map.put("success",false);
+                return map;
+            }else{
+                //如果查询token有值，判断token有效期
+                if (!(tokenu.getId()==1)){
+                    if((new Date().getTime() - tokenu.getTokenDate().getTime()) > 60*60*1000){
+                        map.put("code",201);
+                        map.put("msg","token已失效");
+                        map.put("success",false);
+                        return map;
+                    }
+                    else{
+                        //如果token验证成功，刷新token时间
+                        tokenu.setTokenDate(new Date());
+                        tokenuserService.updateById(tokenu);
+                    }
+                }
+            }
+        }else{ //如果查询token为空，返回无效的token
+            map.put("code",203);
+            map.put("msg","token参数无效或为空，验证失败");
+            map.put("success",false);
+            return map;
+        }
+
+        Long statu = Long.parseLong(status);
+        List<Quotations> qlist = quotationsServiceImpl.selectQuotationsByStatus(statu);
+        System.out.println("value = " + qlist);
+
+        List<Integer> indexList = new Vector<>();
+        //通过status来选取对应语句
+        for(int i = 0 ; i < qlist.size() ; i++){
+            indexList.add(i);
+        }
+
+        List<Quotations> list = new Vector<>();
+        Random r = new Random();
+        if(indexList.size() <= 0){
+            map.put("code",201);
+            map.put("msg","获取失败");
+            map.put("success",false);
+            return map;
+        }
+        for(int j = 0 ; j < 6 ; j++){
+            int index = r.nextInt(indexList.size());
+            list.add(qlist.get(indexList.get(index)));
+            indexList.remove(index);
+        }
+        //200成功   201 失败
+        if(list.size()>0){
+            map.put("code",200);
+            map.put("data",list);
+            map.put("msg","获取成功");
+            map.put("success",true);
+        }else{
+            map.put("code",201);
+            map.put("msg","获取失败");
+            map.put("success",false);
+        }
+        return map;
     }
 }

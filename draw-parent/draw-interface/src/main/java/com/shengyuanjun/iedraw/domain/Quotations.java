@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.io.Serializable;
 
 /**
@@ -22,11 +24,12 @@ public class Quotations extends Model<Quotations> {
     /**
      * 语录的主键
      */
-    @TableId(value = "id", type = IdType.AUTO)
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private Long id;
     /**
      * 语录的状态，1开心，2难过，3惊讶，4平静，5欢聚
      */
+    @JsonInclude(value=JsonInclude.Include.NON_NULL)
     private Long quotationsstatus;
     /**
      * 语录

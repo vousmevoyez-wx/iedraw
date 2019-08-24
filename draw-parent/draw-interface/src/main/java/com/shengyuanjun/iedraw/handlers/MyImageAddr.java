@@ -21,7 +21,8 @@ public class MyImageAddr extends WebMvcConfigurerAdapter {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         //addResourceHandler中的是访问路径，可以修改为其他的字符串
         //addResourceLocations中的是实际路径
-        registry.addResourceHandler("/gop/**","/goh/**","/image/**","/gops/**").addResourceLocations("D://gop/","D://images/goh/","file:D://images/","file:D://gop/");
+        registry.addResourceHandler("/gop/**","/goh/**","/image/**","/gops/**").addResourceLocations("/user/jxb/gop/","/user/jxb/goh/","file:/user/jxb/goh/","file:/user/jxb/gop/");
+//        registry.addResourceHandler("/gop/**","/goh/**","/image/**","/gops/**").addResourceLocations("D://gop/","D://images/goh/","file:D://images/","file:D://gop/");
         super.addResourceHandlers(registry);
     }
 }

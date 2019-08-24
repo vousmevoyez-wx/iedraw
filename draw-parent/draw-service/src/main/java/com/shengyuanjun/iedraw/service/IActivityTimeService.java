@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.service.IService;
  */
 public interface IActivityTimeService extends IService<ActivityTime> {
 
+    void updateActivityTime(ActivityTime activityTime);
 }

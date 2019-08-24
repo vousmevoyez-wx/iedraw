@@ -9,11 +9,10 @@
         <result column="goodscode" property="goodscode" />
         <result column="printchart" property="printchart" />
         <result column="printstatus" property="printstatus" />
-        <result column="createtime" property="createtime" />
     </resultMap>
 
     <select id="selectByQuery" resultMap="BaseResultMap">
-        select id,c.customizetime,c.goodscode,printchart,printstatus,createtime
+        select id,c.customizetime,c.goodscode,printchart,printstatus
         from t_customize c
         <where>
             <if test="cq.keyword!=null and cq.keyword!=''">
@@ -23,10 +22,11 @@
                 )
             </if>
         </where>
+        order by id desc
     </select>
 
     <sql id="Base_Column_List">
-    id, customizetime, goodscode, printchart, printstatus, createtime
+    id, customizetime, goodscode, printchart, printstatus
   </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
@@ -40,10 +40,10 @@
   </delete>
     <insert id="insert" parameterType="com.shengyuanjun.iedraw.domain.Customize">
     insert into t_customize (id, customizetime, goodscode,
-      printchart, printstatus, createtime
+      printchart, printstatus
       )
     values (#{id,jdbcType=BIGINT}, #{customizetime,jdbcType=BIGINT}, #{goodscode,jdbcType=VARCHAR},
-      #{printchart,jdbcType=VARCHAR}, #{printstatus,jdbcType=TINYINT}, #{createtime,jdbcType=BIGINT}
+      #{printchart,jdbcType=VARCHAR}, #{printstatus,jdbcType=TINYINT}
       )
   </insert>
     <insert id="insertSelective" parameterType="com.shengyuanjun.iedraw.domain.Customize">
@@ -64,9 +64,6 @@
             <if test="printstatus != null">
                 printstatus,
             </if>
-            <if test="createtime != null">
-                createtime,
-            </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -83,9 +80,6 @@
             </if>
             <if test="printstatus != null">
                 #{printstatus,jdbcType=TINYINT},
-            </if>
-            <if test="createtime != null">
-                #{createtime,jdbcType=BIGINT},
             </if>
         </trim>
     </insert>
@@ -104,9 +98,6 @@
             <if test="printstatus != null">
                 printstatus = #{printstatus,jdbcType=TINYINT},
             </if>
-            <if test="createtime != null">
-                createtime = #{createtime,jdbcType=BIGINT},
-            </if>
         </set>
         where id = #{id,jdbcType=BIGINT}
     </update>
@@ -116,7 +107,28 @@
       goodscode = #{goodscode,jdbcType=VARCHAR},
       printchart = #{printchart,jdbcType=VARCHAR},
       printstatus = #{printstatus,jdbcType=TINYINT},
-      createtime = #{createtime,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
+
+    <update id="updateByGoodsCode" parameterType="com.shengyuanjun.iedraw.domain.Customize">
+        update t_customize
+        <set>
+            <if test="customizetime != null">
+                customizetime = #{customizetime,jdbcType=BIGINT},
+            </if>
+            <if test="printchart != null">
+                printchart = #{printchart,jdbcType=VARCHAR},
+            </if>
+            <if test="printstatus != null">
+                printstatus = #{printstatus,jdbcType=TINYINT},
+            </if>
+        </set>
+        where goodscode = #{goodscode,jdbcType=VARCHAR}
+    </update>
+    <select id="selectByGoodsCode" resultMap="BaseResultMap">
+        select
+        *
+        from t_customize
+        where goodscode = #{goodscode,jdbcType=VARCHAR}
+    </select>
 </mapper>

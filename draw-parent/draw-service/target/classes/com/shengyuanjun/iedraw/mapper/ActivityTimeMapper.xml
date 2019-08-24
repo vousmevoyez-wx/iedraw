@@ -11,4 +11,12 @@
         <result column="enddailytime" property="enddailytime" />
     </resultMap>
 
+    <update id="updateActivityTime" parameterType="com.shengyuanjun.iedraw.domain.ActivityTime">
+        update t_activity_time
+        set
+        beginactivitydate = #{beginactivitydate,jdbcType=BIGINT},
+        endactivitydate = #{endactivitydate,jdbcType=BIGINT}
+        where id = 1
+    </update>
+
 </mapper>

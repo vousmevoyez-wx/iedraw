@@ -8,16 +8,21 @@
   <sql id="Base_Column_List">
     id, accesstoken
   </sql>
+
+<!-- 通过id查看accesstoken -->
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_accesstoken
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from t_accesstoken
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" parameterType="com.shengyuanjun.iedraw.domain.AccessToken">
     insert into t_accesstoken (id, accesstoken)
     values (#{id,jdbcType=INTEGER}, #{accesstoken,jdbcType=VARCHAR})
@@ -41,6 +46,8 @@
       </if>
     </trim>
   </insert>
+
+
   <update id="updateByPrimaryKeySelective" parameterType="com.shengyuanjun.iedraw.domain.AccessToken">
     update t_accesstoken
     <set>
@@ -50,6 +57,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="com.shengyuanjun.iedraw.domain.AccessToken">
     update t_accesstoken
     set accesstoken = #{accesstoken,jdbcType=VARCHAR}
