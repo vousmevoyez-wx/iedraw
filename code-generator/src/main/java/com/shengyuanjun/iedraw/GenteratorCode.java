@@ -105,5 +105,4 @@ public class GenteratorCode {
         // 执行生成
         mpg.execute();
     }
-
 }

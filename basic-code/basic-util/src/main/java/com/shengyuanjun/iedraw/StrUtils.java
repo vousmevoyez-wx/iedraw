@@ -49,7 +49,6 @@ public class StrUtils {
         return list;
     }
 
-
     public static String getRandomString(int length) {
         String str = "0123456789";
         Random random = new Random();
